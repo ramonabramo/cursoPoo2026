@@ -41,14 +41,14 @@ También puedes verlo en el navegador con el ejemplo de `phpinfo` de la clase 1 
 
 **Añadir una versión nueva de PHP**
 
-1. Descarga la versión que necesites (zip, **Thread Safe**, x64) desde <https://windows.php.net/download/>.
-2. Extrae el contenido en una carpeta nueva dentro de `C:\laragon\bin\php\`. Ejemplo: `C:\laragon\bin\php\php-8.3.12-Win32-vs16-x64\` (el `php.exe` debe quedar directamente dentro de esa carpeta).
+1. Descarga la versión que necesites en formato zip, x64 y **NTS (Non Thread Safe)** desde <https://windows.php.net/downloads/releases/archives/> (las versiones antiguas como la 7.4 están en *archives*). **Importante: descarga siempre la versión NTS**; con la *Thread Safe* el entorno nos da problemas.
+2. Extrae el contenido en una carpeta nueva dentro de `C:\laragon\bin\php\`. Ejemplo: `C:\laragon\bin\php\php-7.4.33-nts-Win32-vc15-x64\` (el `php.exe` debe quedar directamente dentro de esa carpeta).
 3. Reinicia Laragon, o vuelve a abrir el menú.
 4. Selecciona la nueva versión en **Menú → PHP → Versión**.
 
 > Si cambias de versión y alguna extensión falla (por ejemplo `pdo_mysql` o `mbstring`), activa en **Menú → PHP → Extensiones** las que necesites. Cada versión de PHP tiene su propio `php.ini`: **Menú → PHP → php.ini**.
 
-**¿Qué versión usaremos?** PHP 8.2 o superior. Laravel exige una versión mínima de PHP según su versión (consulta la documentación oficial de Laravel antes de empezar esa parte).
+**¿Qué versión usaremos?** En el curso trabajaremos con **Laravel 6 (LTS)**, que funciona con PHP desde la 7.2 hasta la 8.0. Por eso usaremos **PHP 7.4 NTS** (recomendada) o **PHP 8.0 NTS**. Con PHP 8.1 o superior Laravel 6 no es compatible.
 
 ## 4. Cambiar la versión de MySQL
 
@@ -69,20 +69,36 @@ También puedes verlo en el navegador con el ejemplo de `phpinfo` de la clase 1 
 > 2. Cambia a la versión nueva.
 > 3. Importa: `mysql -u root -p < copia.sql`
 
-## 5. Problemas habituales
+## 5. Instalar Laravel 6
+
+Con PHP 7.4 (o 8.0) activo en Laragon, abre la terminal de Laragon y crea el proyecto en `C:\laragon\www`:
+
+```bash
+cd C:\laragon\www
+composer create-project --prefer-dist laravel/laravel:^6.0 mi-app
+```
+
+La versión indicada (`^6.0`) hace que Composer instale siempre la 6.x más reciente. Comprueba la versión instalada con:
+
+```bash
+cd mi-app
+php artisan --version
+```
+
+## 6. Problemas habituales
 
 | Problema | Solución |
 |----------|----------|
 | `php -v` sigue mostrando la versión antigua | Cierra y abre de nuevo la terminal, o usa la de Laragon |
 | El puerto 80 o 3306 está ocupado | Cierra Skype/IIS u otro MySQL instalado, o cambia el puerto en **Menú → Preferencias → Servicios y puertos** |
-| Apache no arranca tras cambiar de PHP | Revisa que la carpeta de PHP sea *Thread Safe* y contenga `php.exe` directamente |
+| Apache no arranca o da errores tras cambiar de PHP | Asegúrate de haber descargado la versión **NTS** y de que la carpeta contenga `php.exe` directamente |
 | Falta una extensión | **Menú → PHP → Extensiones** |
 | Las bases de datos han desaparecido | Estás en otra versión de MySQL: vuelve a la anterior o importa un volcado |
 
 ## Lista de comprobación para el primer día
 
 - [ ] Laragon arranca y `http://localhost` funciona
-- [ ] `php -v` muestra PHP 8.2 o superior
+- [ ] `php -v` muestra PHP 7.4 u 8.0 (versión NTS)
 - [ ] MySQL arranca correctamente
 - [ ] VS Code abre la carpeta del curso
 - [ ] `git clone` del repositorio hecho

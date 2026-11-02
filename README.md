@@ -16,7 +16,7 @@ Al terminar el curso serás capaz de:
 2. **Dominar los fundamentos de PHP**: variables, tipos, estructuras de control, funciones, arrays, formularios y sesiones.
 3. **Programar con orientación a objetos**: clases, objetos, encapsulación, herencia, polimorfismo, interfaces, traits, namespaces y excepciones.
 4. **Aplicar buenas prácticas**: principios SOLID, PSR, Composer y autoloading, y trabajo con bases de datos mediante PDO.
-5. **Construir aplicaciones con Laravel**: rutas, controladores, modelos (Eloquent), vistas con Blade, migraciones y autenticación.
+5. **Construir aplicaciones con Laravel 6 (LTS)**: rutas, controladores, modelos (Eloquent), vistas con Blade, migraciones y autenticación.
 
 ## Temario (previsto)
 
@@ -31,8 +31,8 @@ Al terminar el curso serás capaz de:
 | 06 | Herencia, polimorfismo, interfaces y traits |
 | 07 | Namespaces, Composer y autoloading |
 | 08 | Bases de datos con PDO |
-| 09 | Introducción a Laravel |
-| 10 | Laravel: Eloquent, Blade, migraciones y autenticación |
+| 09 | Introducción a Laravel 6 (LTS) |
+| 10 | Laravel 6: Eloquent, Blade, migraciones y autenticación |
 
 > El temario puede ajustarse según el ritmo del grupo.
 
@@ -50,7 +50,7 @@ Cada carpeta contiene su propio `README.md` con la explicación de la clase y c�
 
 ## Requisitos
 
-- Un servidor local con PHP 8.1 o superior. Recomendado: [Laragon](https://laragon.org/) (Windows), o XAMPP / MAMP.
+- Un servidor local con **PHP 7.4 u 8.0 en versión NTS** (necesario para Laravel 6). Recomendado: [Laragon](https://laragon.org/) (Windows), o XAMPP / MAMP.
 - Un editor de código: [Visual Studio Code](https://code.visualstudio.com/) con la extensión *PHP Intelephense*.
 - [Git](https://git-scm.com/) para descargar el material.
 - Un navegador moderno (Chrome, Firefox o Edge) con las herramientas de desarrollador.
