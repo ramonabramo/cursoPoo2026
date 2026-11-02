@@ -22,6 +22,7 @@ Al terminar el curso serás capaz de:
 
 | Bloque | Contenido |
 |--------|-----------|
+| 00 | Preparación del entorno: Laragon, versiones de PHP y MySQL |
 | 01 | Introducción a PHP y a la programación web (`phpinfo`, formularios GET/POST) |
 | 02 | Fundamentos de PHP: variables, tipos, operadores, control de flujo |
 | 03 | Funciones y arrays |
@@ -40,6 +41,7 @@ Al terminar el curso serás capaz de:
 ```
 cursoPoo2026/
 ├── README.md
+├── 00-entorno/          <- Guía de instalación y configuración de Laragon
 ├── 01-introduccion/     <- Primera clase: cómo funciona PHP y la web
 └── ...                  <- Se irán añadiendo carpetas con cada clase
 ```
