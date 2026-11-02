@@ -55,6 +55,8 @@ Abre `http://localhost/cursoPoo2026/01-introduccion/` para ver el índice.
 | Validación en servidor | Nunca confíes en los datos del usuario |
 | Escapar la salida | `htmlspecialchars()` evita inyección de código (XSS) |
 
+> Antes de empezar, revisa la [guía del entorno](../00-entorno/README.md).
+
 ## Próxima clase
 
 Fundamentos del lenguaje: variables, tipos de datos, operadores y estructuras de control.
