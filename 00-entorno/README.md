@@ -4,11 +4,14 @@ Antes de la primera clase necesitas tener instalado el entorno de trabajo. En es
 
 ## 1. Instalación
 
-1. Descarga **Laragon Full** desde <https://laragon.org/download/> y ejecuta el instalador (ruta por defecto: `C:\laragon`).
+1. Descarga **Laragon 6.0** (versión *Full*) desde la página de versiones: <https://github.com/leokhoa/laragon/releases>. Usaremos la 6.0 porque es la última versión sin licencia de pago. Ejecuta el instalador (ruta por defecto: `C:\laragon`).
 2. Abre Laragon y pulsa **Iniciar todo**. Deben aparecer Apache y MySQL en marcha.
 3. Abre el navegador en `http://localhost`: verás la página de bienvenida.
 4. Instala [Visual Studio Code](https://code.visualstudio.com/) y la extensión **PHP Intelephense**.
 5. Instala [Git](https://git-scm.com/).
+6. Instala [Node.js](https://nodejs.org/) (versión LTS); lo necesitaremos para el frontend de Laravel.
+
+> **No actualices Laragon** a versiones posteriores a la 6.0 aunque el programa te lo sugiera.
 
 Tus proyectos van en `C:\laragon\www`. Para este curso:
 
@@ -41,14 +44,14 @@ También puedes verlo en el navegador con el ejemplo de `phpinfo` de la clase 1 
 
 **Añadir una versión nueva de PHP**
 
-1. Descarga la versión que necesites en formato zip, x64 y **NTS (Non Thread Safe)** desde <https://windows.php.net/downloads/releases/archives/> (las versiones antiguas como la 7.4 están en *archives*). **Importante: descarga siempre la versión NTS**; con la *Thread Safe* el entorno nos da problemas.
-2. Extrae el contenido en una carpeta nueva dentro de `C:\laragon\bin\php\`. Ejemplo: `C:\laragon\bin\php\php-7.4.33-nts-Win32-vc15-x64\` (el `php.exe` debe quedar directamente dentro de esa carpeta).
+1. Descarga la versión que necesites en formato zip, x64 y **NTS (Non Thread Safe)** desde <https://windows.php.net/download/> (las versiones antiguas están en *Releases → Archives*). **Importante: descarga siempre la versión NTS**; con la *Thread Safe* el entorno nos da problemas.
+2. Extrae el contenido en una carpeta nueva dentro de `C:\laragon\bin\php\`. Ejemplo: `C:\laragon\bin\php\php-8.3.12-nts-Win32-vs16-x64\` (el `php.exe` debe quedar directamente dentro de esa carpeta).
 3. Reinicia Laragon, o vuelve a abrir el menú.
 4. Selecciona la nueva versión en **Menú → PHP → Versión**.
 
 > Si cambias de versión y alguna extensión falla (por ejemplo `pdo_mysql` o `mbstring`), activa en **Menú → PHP → Extensiones** las que necesites. Cada versión de PHP tiene su propio `php.ini`: **Menú → PHP → php.ini**.
 
-**¿Qué versión usaremos?** En el curso trabajaremos con **Laravel 6 (LTS)**, que funciona con PHP desde la 7.2 hasta la 8.0. Por eso usaremos **PHP 7.4 NTS** (recomendada) o **PHP 8.0 NTS**. Con PHP 8.1 o superior Laravel 6 no es compatible.
+**¿Qué versión usaremos?** En el curso trabajaremos con **Laravel 13**, que necesita **PHP 8.3 o superior**. Por eso usaremos **PHP 8.3 NTS** (o una 8.4 / 8.5 NTS si Laragon la tiene disponible).
 
 ## 4. Cambiar la versión de MySQL
 
@@ -69,21 +72,25 @@ También puedes verlo en el navegador con el ejemplo de `phpinfo` de la clase 1 
 > 2. Cambia a la versión nueva.
 > 3. Importa: `mysql -u root -p < copia.sql`
 
-## 5. Instalar Laravel 6
+## 5. Instalar Laravel 13
 
-Con PHP 7.4 (o 8.0) activo en Laragon, abre la terminal de Laragon y crea el proyecto en `C:\laragon\www`:
+Con PHP 8.3 NTS activo en Laragon, abre la terminal de Laragon y crea el proyecto en `C:\laragon\www`:
 
 ```bash
 cd C:\laragon\www
-composer create-project --prefer-dist laravel/laravel:^6.0 mi-app
+composer create-project laravel/laravel:^13.0 mi-app
 ```
 
-La versión indicada (`^6.0`) hace que Composer instale siempre la 6.x más reciente. Comprueba la versión instalada con:
+Comprueba la versión instalada con:
 
 ```bash
 cd mi-app
 php artisan --version
 ```
+
+Para arrancar el proyecto en desarrollo puedes usar `php artisan serve`, o los *virtual hosts* automáticos de Laragon (la carpeta `mi-app` estará disponible como `http://mi-app.test`).
+
+> La instalación de las dependencias de frontend (`npm install`) requiere Node.js.
 
 ## 6. Problemas habituales
 
@@ -98,7 +105,8 @@ php artisan --version
 ## Lista de comprobación para el primer día
 
 - [ ] Laragon arranca y `http://localhost` funciona
-- [ ] `php -v` muestra PHP 7.4 u 8.0 (versión NTS)
+- [ ] `php -v` muestra PHP 8.3 o superior (versión NTS)
+- [ ] `node -v` y `composer --version` funcionan
 - [ ] MySQL arranca correctamente
 - [ ] VS Code abre la carpeta del curso
 - [ ] `git clone` del repositorio hecho
