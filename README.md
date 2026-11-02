@@ -22,6 +22,8 @@ Al terminar el curso serás capaz de:
 
 ## Temario (previsto)
 
+![Hoja de ruta del curso de PHP, POO y Laravel 13](img/hoja-de-ruta.webp)
+
 | Parte | Bloques | Contenido |
 |-------|---------|-----------|
 | 0. Preparación | 00 | Entorno: Laragon, versiones de PHP y MySQL |
