@@ -88,7 +88,7 @@
 - Uso de paquetes de terceros
 
 ### 12. Bases de datos con PDO
-- Repaso de SQL y diseño de tablas con MySQL
+- Requisito: haber visto al menos los bloques S01 a S06 del itinerario de SQL
 - Conexión con PDO y manejo de errores
 - Consultas preparadas (evitar inyección SQL)
 - CRUD completo
@@ -100,6 +100,62 @@
 - Inyección de dependencias
 - Patrones: *Singleton*, *Factory*, *Strategy*, *Observer*
 - Pruebas unitarias con PHPUnit
+
+## Itinerario paralelo: SQL con MySQL
+
+> Se imparte a lo largo del curso, **antes de empezar PDO (bloque 12)**: lo ideal es empezar tras el bloque 03 o 04 e ir alternando con PHP. Va de lo más básico a consultas avanzadas, siempre con MySQL.
+
+### S01. Introducción a las bases de datos
+- Qué es una base de datos y modelo relacional: tablas, filas, columnas, claves
+- Servidor y clientes MySQL (HeidiSQL, phpMyAdmin, línea de comandos)
+- Crear y usar una base de datos, juegos de caracteres (`utf8mb4`)
+
+### S02. Definición de datos (DDL)
+- `CREATE`, `ALTER`, `DROP` y `TRUNCATE`
+- Tipos de datos: numéricos, texto, fechas, `ENUM`, `JSON`
+- Restricciones: `PRIMARY KEY`, `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE`, `DEFAULT`, `CHECK`
+
+### S03. Manipulación y consulta básica
+- `INSERT`, `UPDATE` y `DELETE`
+- `SELECT`: columnas, alias y `DISTINCT`
+- Filtros con `WHERE`: operadores, `AND`/`OR`/`NOT`, `IN`, `BETWEEN`, `LIKE`, `IS NULL`
+- `ORDER BY`, `LIMIT` y paginación
+
+### S04. Funciones y expresiones
+- Funciones de cadenas, numéricas y de fecha
+- `CASE`, `IF`, `IFNULL` y `COALESCE`
+- Conversión de tipos
+
+### S05. Agregación y agrupación
+- `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`
+- `GROUP BY` y `HAVING`
+- Diferencia entre `WHERE` y `HAVING`
+
+### S06. Diseño relacional y JOINs
+- Diagramas entidad-relación y relaciones 1:1, 1:N y N:M
+- Claves foráneas e integridad referencial
+- Normalización (1FN, 2FN, 3FN)
+- `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `CROSS JOIN` y *self join*
+
+### S07. Consultas avanzadas
+- Subconsultas y subconsultas correlacionadas, `EXISTS`
+- `UNION` y operaciones de conjuntos
+- Expresiones de tabla comunes (`WITH`) y recursivas
+- Funciones de ventana: `ROW_NUMBER`, `RANK`, `LAG`, `LEAD`, `SUM() OVER`
+- Vistas
+
+### S08. Transacciones, índices y rendimiento
+- Transacciones y propiedades ACID, niveles de aislamiento
+- Índices y análisis de consultas con `EXPLAIN`
+- Optimización de consultas
+- Motores de almacenamiento (InnoDB)
+
+### S09. Programación en MySQL y administración
+- Procedimientos almacenados y funciones
+- *Triggers* y eventos
+- Trabajo con `JSON` en MySQL
+- Usuarios y privilegios
+- Copias de seguridad y restauración (`mysqldump`), importación y exportación
 
 ## Parte 3: Construimos nuestro propio MVC
 
