@@ -16,8 +16,9 @@ Al terminar el curso serás capaz de:
 2. **Dominar los fundamentos de PHP**: variables, tipos, estructuras de control, funciones, arrays, formularios, sesiones y ficheros.
 3. **Programar con orientación a objetos**: clases, objetos, encapsulación, herencia, polimorfismo, interfaces, traits, enums, namespaces y excepciones.
 4. **Aplicar buenas prácticas**: principios SOLID, estándares PSR, Composer, autoloading, pruebas y acceso a bases de datos con PDO.
-5. **Construir nuestro propio framework MVC** en PHP para entender qué hay detrás de Laravel o de cualquier otro framework.
-6. **Desarrollar aplicaciones completas con Laravel 13**: rutas, controladores, Blade, migraciones, Eloquent, validación, autenticación, APIs, pruebas y despliegue.
+5. **Aprender SQL con MySQL** desde lo más básico hasta consultas avanzadas: diseño de tablas, JOINs, subconsultas, funciones de ventana, transacciones e índices.
+6. **Construir nuestro propio framework MVC** en PHP para entender qué hay detrás de Laravel o de cualquier otro framework.
+7. **Desarrollar aplicaciones completas con Laravel 13**: rutas, controladores, Blade, migraciones, Eloquent, validación, autenticación, APIs, pruebas y despliegue.
 
 ## Temario (previsto)
 
@@ -26,6 +27,7 @@ Al terminar el curso serás capaz de:
 | 0. Preparación | 00 | Entorno: Laragon, versiones de PHP y MySQL |
 | 1. PHP desde cero | 01 - 07 | Programación web, sintaxis, estructuras de control, funciones, arrays, formularios, sesiones, errores |
 | 2. Programación orientada a objetos | 08 - 13 | Clases y objetos, herencia, interfaces, traits, namespaces, Composer, PDO, SOLID y patrones, PHPUnit |
+| SQL (en paralelo) | S01 - S09 | SQL con MySQL: DDL, consultas, funciones, agrupaciones, JOINs, subconsultas, ventanas, transacciones, índices, procedimientos y administración |
 | 3. Nuestro propio MVC | 14 - 18 | Front controller, router, controladores, vistas, modelos, contenedor DI, middleware y API REST |
 | 4. Laravel 13 | 19 - 30 | Rutas, Blade, migraciones, Eloquent, validación, autenticación, arquitectura interna, API, pruebas, colas, proyecto final |
 
@@ -40,11 +42,23 @@ cursoPoo2026/
 ├── README.md
 ├── TEMARIO.md           <- Temario detallado del curso
 ├── 00-entorno/          <- Guía de instalación y configuración de Laragon
+├── sql/                 <- Scripts y ejercicios de SQL con MySQL (se añadirá)
 ├── 01-introduccion/     <- Primera clase: cómo funciona PHP y la web
 └── ...                  <- Se irán añadiendo carpetas con cada clase
 ```
 
 Cada carpeta contiene su propio `README.md` con la explicación de la clase y cómo ejecutar los ejemplos.
+
+## Proyectos del curso (repositorios aparte)
+
+Este repositorio contiene los apuntes, el temario y los ejemplos pequeños. Los proyectos grandes viven cada uno en **su propio repositorio**, para mantener el historial limpio y que puedas ver cómo se construyen paso a paso.
+
+| Proyecto | Repositorio | Estado |
+|----------|-------------|--------|
+| Nuestro propio framework MVC | `cursoPoo2026-mvc` | Próximamente |
+| Proyectos de Laravel 13 | `cursoPoo2026-laravel-<nombre-del-proyecto>` | Próximamente |
+
+En los repositorios de proyecto marcaremos con *tags* el estado de cada clase (por ejemplo `clase-23-eloquent`), para que puedas volver a ese punto con `git checkout`.
 
 ## Requisitos
 
