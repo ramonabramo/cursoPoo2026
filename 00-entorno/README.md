@@ -36,6 +36,8 @@ También puedes verlo en el navegador con el ejemplo de `phpinfo` de la clase 1 
 
 ## 3. Cambiar la versión de PHP
 
+![Cómo cambiar la versión de PHP y MySQL en Laragon](img/laragon-versiones.webp)
+
 **Cambiar entre versiones ya instaladas**
 
 1. Clic derecho sobre el icono de Laragon (o botón **Menu**).

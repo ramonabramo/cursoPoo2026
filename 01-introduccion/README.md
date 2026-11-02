@@ -10,16 +10,7 @@
 
 ## Cómo funciona la web (resumen)
 
-```
- Navegador (cliente)                         Servidor (Apache/Nginx + PHP)
-        │   1. Petición HTTP  (GET /index.php)          │
-        │ ────────────────────────────────────────────► │
-        │                                               │ 2. PHP ejecuta el código
-        │                                               │    (consulta datos, calcula...)
-        │   3. Respuesta HTTP (HTML ya generado)        │
-        │ ◄──────────────────────────────────────────── │
-        │ 4. El navegador pinta el HTML                 │
-```
+![Cómo funciona la web: cliente, servidor, petición y respuesta HTTP](img/cliente-servidor.webp)
 
 - **PHP se ejecuta siempre en el servidor.** El navegador solo recibe el resultado (HTML).
 - **Cada petición es independiente**: HTTP no recuerda nada entre una petición y la siguiente (más adelante veremos sesiones y cookies).
@@ -54,6 +45,8 @@ Abre `http://localhost/cursoPoo2026/01-introduccion/` para ver el índice.
 | GET vs POST | GET: datos en la URL, para consultar. POST: datos en el cuerpo, para enviar/modificar |
 | Validación en servidor | Nunca confíes en los datos del usuario |
 | Escapar la salida | `htmlspecialchars()` evita inyección de código (XSS) |
+
+![Diferencias entre GET y POST](img/get-vs-post.webp)
 
 > Antes de empezar, revisa la [guía del entorno](../00-entorno/README.md).
 
