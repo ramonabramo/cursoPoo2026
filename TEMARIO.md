@@ -26,7 +26,7 @@
 
 ### Clases 4 a 6. Primeros pasos con PHP · [ver](clase-04-primeros-pasos-php/README.md)
 > Ejemplos de introducción para entender la programación web. Cada tema se estudia en profundidad en los bloques siguientes.
-- **Clase 4:** qué es PHP, `phpinfo()`, primer script, sintaxis básica, variables, tipos y operadores
+- **Clase 4:** qué es PHP, `phpinfo()`, primer script, sintaxis básica (`echo` y echo corto `<?=`), variables, tipos y operadores
 - **Clase 5:** condicionales, `switch` y `match`, bucles, sintaxis alternativa, arrays y funciones
 - **Clase 6:** formularios GET y POST, errores frecuentes, primera conexión con MySQL (PDO) y ejercicios
 

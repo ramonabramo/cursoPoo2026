@@ -191,6 +191,38 @@ echo "<strong>Negrita</strong>";  // también genera HTML
 
 📄 Ejemplo: [`04-echo-comentarios.php`](ejemplos/04-echo-comentarios.php)
 
+### El echo corto: `<?=`
+
+Cuando mezcláis PHP y HTML, vais a escribir muchísimas veces `<?php echo ...; ?>` solo para mostrar un valor. Para eso PHP tiene un atajo: el **echo corto** (también llamado echo contraído), `<?=`.
+
+Estas dos líneas hacen exactamente lo mismo:
+
+```php
+<p>Hoy es <?php echo date("d/m/Y"); ?></p>
+<p>Hoy es <?= date("d/m/Y") ?></p>
+```
+
+Fijaos en lo que desaparece: la palabra `echo` y el punto y coma final. `<?=` ya significa «abre PHP y muestra esto», y el `?>` de cierre hace de punto y coma.
+
+| Forma larga | Echo corto |
+|---|---|
+| `<?php echo $nombre; ?>` | `<?= $nombre ?>` |
+| `<?php echo date("Y"); ?>` | `<?= date("Y") ?>` |
+| `<?php echo "Hola, $nombre"; ?>` | `<?= "Hola, $nombre" ?>` |
+
+¿Cuándo usar cada uno?
+
+- Para **mostrar un único valor dentro del HTML**, el echo corto: queda más limpio y se lee mejor.
+- Para **varias instrucciones** (asignar variables, `if`, bucles…), la etiqueta normal `<?php ... ?>`. Dentro de `<?=` solo cabe una expresión que mostrar.
+
+> 💡 El echo corto **siempre está disponible** desde PHP 5.4 y no depende de ninguna configuración [8]. No lo confundáis con la etiqueta corta `<?` a secas (sin `php` ni `=`): esa sí depende de la opción `short_open_tag` y os recomiendo no usarla nunca.
+
+> ⚠️ **Curiosidad que os puede costar un rato:** PHP busca sus etiquetas en todo el archivo, **también dentro de los comentarios HTML** (`<!-- -->`). Si escribís `<?=` dentro de un comentario HTML, PHP intentará ejecutarlo y os dará un *Parse error*.
+
+📄 Ejemplo: [`03-fecha.php`](ejemplos/03-fecha.php) (incluye las dos formas)
+
+Lo volveréis a ver en las plantillas con formularios y en el ejemplo completo con MySQL, y más adelante en Laravel, cuyas vistas Blade usan una idea parecida con `{{ }}`.
+
 ### Reglas que conviene recordar
 
 | Regla | Ejemplo |
@@ -1060,3 +1092,4 @@ Cread un archivo por ejercicio dentro de `C:\laragon\www\php-basico` y probadlo 
 5. [Manual de PHP: htmlspecialchars](https://www.php.net/manual/es/function.htmlspecialchars.php)
 6. [Manual de PHP: PDO (PHP Data Objects)](https://www.php.net/manual/es/book.pdo.php)
 7. [Manual de PHP: sentencias preparadas y procedimientos almacenados](https://www.php.net/manual/es/pdo.prepared-statements.php)
+8. [Manual de PHP: etiquetas de PHP](https://www.php.net/manual/es/language.basic-syntax.phptags.php)
