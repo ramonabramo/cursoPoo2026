@@ -1,96 +1,108 @@
 # Curso de Programación Orientada a Objetos con PHP (2026)
 
-¡Bienvenido/a! Este repositorio contiene todo el material del curso: apuntes, ejemplos y ejercicios que iremos construyendo clase a clase, desde los primeros pasos con PHP hasta crear aplicaciones web con **Laravel**.
+<p align="center"><img src="img/emojis/hola.webp" width="140" alt="Saludo del profesor"></p>
 
-## Presentación
+¡Bienvenidos y bienvenidas! 👋 Este repositorio es vuestro punto de partida: aquí iréis encontrando, clase a clase, la teoría, los ejemplos y los ejercicios del curso, desde lo más básico de la programación web hasta desarrollar aplicaciones completas con **Laravel**.
 
-Soy **Ramon Abramo**, ingeniero de telecomunicaciones y programador. Trabajo como docente y administrador de sistemas, y en este curso quiero enseñarte a programar en PHP de la forma en que se hace hoy en proyectos reales: con código limpio, organizado y orientado a objetos.
+---
 
-No hace falta experiencia previa en PHP. Empezaremos por lo más básico (qué es un servidor web, qué hace PHP cuando abres una página) y avanzaremos paso a paso, con ejemplos pequeños que puedes ejecutar y modificar tú mismo/a.
+## <img src="img/emojis/explica.webp" width="40" alt=""> Presentación
 
-## Objetivo del curso
+Buenas, soy **Ramón Abramo**, profesor con más de 25 años de experiencia docente, y voy a acompañaros durante todo el curso.
 
-Al terminar el curso serás capaz de:
+No necesitáis saber programar. Empezaremos desde cero: qué es la programación web, qué hace cada tecnología, cómo se monta un entorno de trabajo… y solo entonces escribiremos nuestras primeras líneas de PHP. A partir de ahí iremos subiendo el nivel poco a poco, siempre con ejemplos pequeños que podréis escribir, probar y modificar vosotros mismos.
 
-1. **Entender cómo funciona la web**: cliente, servidor, peticiones y respuestas HTTP, y el papel de PHP en todo ello.
-2. **Dominar los fundamentos de PHP**: variables, tipos, estructuras de control, funciones, arrays, formularios, sesiones y ficheros.
-3. **Programar con orientación a objetos**: clases, objetos, encapsulación, herencia, polimorfismo, interfaces, traits, enums, namespaces y excepciones.
-4. **Aplicar buenas prácticas**: principios SOLID, estándares PSR, Composer, autoloading, pruebas y acceso a bases de datos con PDO.
-5. **Aprender SQL con MySQL** desde lo más básico hasta consultas avanzadas: diseño de tablas, JOINs, subconsultas, funciones de ventana, transacciones e índices.
-6. **Construir nuestro propio framework MVC** en PHP para entender qué hay detrás de Laravel o de cualquier otro framework.
-7. **Desarrollar aplicaciones completas con Laravel 13**: rutas, controladores, Blade, migraciones, Eloquent, validación, autenticación, APIs, pruebas y despliegue.
+Mi forma de trabajar es sencilla: primero entender, luego practicar. Y preguntar todo lo que haga falta. 🙂
 
-## Temario (previsto)
+---
 
-![Hoja de ruta del curso de PHP, POO y Laravel 13](img/hoja-de-ruta.webp)
+## <img src="img/emojis/ok.webp" width="40" alt=""> Objetivo del curso
 
-| Parte | Bloques | Contenido |
-|-------|---------|-----------|
-| 0. Preparación | 00 | Entorno: Laragon, versiones de PHP y MySQL |
-| 1. PHP desde cero | 01 - 07 | Programación web, sintaxis, estructuras de control, funciones, arrays, formularios, sesiones, errores |
-| 2. Programación orientada a objetos | 08 - 13 | Clases y objetos, herencia, interfaces, traits, namespaces, Composer, PDO, SOLID y patrones, PHPUnit |
-| SQL (en paralelo) | S01 - S09 | SQL con MySQL: DDL, consultas, funciones, agrupaciones, JOINs, subconsultas, ventanas, transacciones, índices, procedimientos y administración |
-| 3. Nuestro propio MVC | 14 - 18 | Front controller, router, controladores, vistas, modelos, contenedor DI, middleware y API REST |
-| 4. Laravel 13 | 19 - 30 | Rutas, Blade, migraciones, Eloquent, validación, autenticación, arquitectura interna, API, pruebas, colas, proyecto final |
+Al terminar el curso seréis capaces de:
 
-Consulta el **[temario detallado](TEMARIO.md)** con el contenido de cada bloque.
+1. 🌐 **Entender cómo funciona la web**: cliente, servidor, frontend, backend y el papel de cada tecnología.
+2. 🛠️ **Montar vuestro propio entorno de desarrollo** con Laragon y Visual Studio Code.
+3. 🐘 **Programar en PHP**: variables, condiciones, bucles, arrays, funciones y formularios.
+4. 🐬 **Trabajar con bases de datos MySQL** usando SQL y conectarlas con PHP.
+5. 🧱 **Programar con orientación a objetos**: clases, objetos, herencia, interfaces y buenas prácticas.
+6. 🏗️ **Entender cómo funciona un framework** construyendo nuestro propio MVC.
+7. 🚀 **Desarrollar aplicaciones web completas con Laravel**.
 
-> El temario puede ajustarse según el ritmo del grupo.
+---
 
-## Estructura del repositorio
+## <img src="img/emojis/curioso.webp" width="40" alt=""> Esquema general del curso
 
-```
+![Hoja de ruta del curso](img/hoja-de-ruta.webp)
+
+### Primeras clases
+
+| Clase | Tema | Contenido |
+|---|---|---|
+| **1** | [🌍 El mundo de la programación hoy](clase-01-mundo-programacion/README.md) | Programación web y de escritorio, cliente y servidor, frontend, backend y fullstack, HTML, CSS, JavaScript, PHP y MySQL. **Solo teoría** |
+| **2** | [🛠️ Entorno de desarrollo con Laragon](clase-02-entorno-laragon/README.md) | Instalación de Laragon 6, cambio de versión de PHP (NTS) y MySQL, carpeta raíz y virtual hosts automáticos |
+| **3** | [🧩 Visual Studio Code y sus extensiones](clase-03-visual-studio-code/README.md) | Extensiones para PHP, HTML, CSS, JavaScript y Laravel, ajustes y atajos |
+| **4 a 6** | [🐘 Primeros pasos con PHP](clase-04-primeros-pasos-php/README.md) | Ejemplos de introducción: phpinfo, sintaxis, variables, operadores, condicionales, bucles, arrays, funciones, formularios, errores y primera conexión con MySQL |
+
+### Lo que viene después
+
+A partir de aquí iremos añadiendo clases. Este es el recorrido previsto:
+
+| Parte | Contenido |
+|---|---|
+| 🐘 **PHP en profundidad** | Fundamentos del lenguaje, estructuras de control, funciones, arrays y cadenas, formularios, sesiones, ficheros y errores |
+| 🐬 **SQL con MySQL** (en paralelo) | Diseño de tablas, consultas, funciones, agrupaciones, JOINs, subconsultas, transacciones e índices |
+| 🧱 **Programación orientada a objetos** | Clases y objetos, herencia, interfaces, traits, namespaces, Composer, PDO, principios SOLID y patrones |
+| 🏗️ **Nuestro propio MVC** | Front controller, router, controladores, vistas, modelos y API REST |
+| 🚀 **Laravel** | Rutas, Blade, migraciones, Eloquent, validación, autenticación, API, pruebas y despliegue |
+
+Consultad el **[temario detallado](TEMARIO.md)** para ver el contenido de cada bloque.
+
+> 📌 El temario puede ajustarse según el ritmo del grupo.
+
+---
+
+## <img src="img/emojis/pensando.webp" width="40" alt=""> Estructura del repositorio
+
+```text
 cursoPoo2026/
-├── README.md
-├── TEMARIO.md           <- Temario detallado del curso
-├── 00-entorno/          <- Guía de instalación y configuración de Laragon
-├── sql/                 <- Scripts y ejercicios de SQL con MySQL (se añadirá)
-├── 01-introduccion/     <- Primera clase: cómo funciona PHP y la web
-└── ...                  <- Se irán añadiendo carpetas con cada clase
+├── README.md                        ← Estás aquí: presentación y esquema del curso
+├── TEMARIO.md                       ← Temario detallado
+├── img/                             ← Imágenes comunes
+├── clase-01-mundo-programacion/     ← Clase 1: teoría de introducción
+├── clase-02-entorno-laragon/        ← Clase 2: instalación y configuración de Laragon
+├── clase-03-visual-studio-code/     ← Clase 3: VS Code y extensiones
+├── clase-04-primeros-pasos-php/     ← Clases 4 a 6: ejemplos de introducción a PHP
+│   └── ejemplos/                    ← Todos los ejemplos, numerados en orden
+└── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
-Cada carpeta contiene su propio `README.md` con la explicación de la clase y cómo ejecutar los ejemplos.
+Cada carpeta tiene su propio `README.md` con la explicación de la clase.
 
-## Proyectos del curso (repositorios aparte)
+---
 
-Este repositorio contiene los apuntes, el temario y los ejemplos pequeños. Los proyectos grandes viven cada uno en **su propio repositorio**, para mantener el historial limpio y que puedas ver cómo se construyen paso a paso.
+## <img src="img/emojis/atencion.webp" width="40" alt=""> Qué vais a necesitar
 
-| Proyecto | Repositorio | Estado |
-|----------|-------------|--------|
-| Nuestro propio framework MVC | `cursoPoo2026-mvc` | Próximamente |
-| Proyectos de Laravel 13 | `cursoPoo2026-laravel-<nombre-del-proyecto>` | Próximamente |
+No instaléis nada todavía: lo haremos juntos en la clase 2 y en la clase 3. Solo para que lo tengáis en el radar:
 
-En los repositorios de proyecto marcaremos con *tags* el estado de cada clase (por ejemplo `clase-23-eloquent`), para que puedas volver a ese punto con `git checkout`.
+- 💻 Un ordenador con **Windows 10 u 11**.
+- 🛠️ **Laragon 6.0**, que nos dará Apache, PHP y MySQL.
+- 🧩 **Visual Studio Code** como editor.
+- 🌐 Un navegador moderno: Chrome, Firefox o Edge.
+- 🔀 Más adelante, **Git** para descargar el material y **Node.js** para Laravel.
 
-## Requisitos
+---
 
-- **Laragon 6.0** (Windows): la última versión sin licencia de pago. Incluye Apache, MySQL y Composer.
-- **PHP 8.3 o superior en versión NTS** (requisito de Laravel 13).
-- [Node.js](https://nodejs.org/) (versión LTS) para el frontend de Laravel (Vite).
-- Un editor de código: [Visual Studio Code](https://code.visualstudio.com/) con la extensión *PHP Intelephense*.
-- [Git](https://git-scm.com/) para descargar el material.
-- Un navegador moderno (Chrome, Firefox o Edge) con las herramientas de desarrollador.
+## <img src="img/emojis/bien.webp" width="40" alt=""> Cómo trabajar durante el curso
 
-## Cómo usar este repositorio
+- ⌨️ **Escribid el código vosotros**, no copiéis y peguéis: así es como se aprende.
+- 🔧 **Modificad los ejemplos**, rompedlos y arregladlos. Es la mejor forma de entenderlos.
+- 🙋 **Preguntad** cualquier duda, por básica que parezca.
+- 🔁 **Repasad** la clase anterior antes de empezar la siguiente: cada una se apoya en lo que ya sabéis.
 
-```bash
-# Con Laragon, clona dentro de la carpeta www
-cd C:\laragon\www
-git clone https://github.com/ramonabramo/cursoPoo2026.git
-```
+¡Empezamos! 👉 [Clase 1 · El mundo de la programación hoy](clase-01-mundo-programacion/README.md)
 
-Después abre en el navegador `http://localhost/cursoPoo2026/01-introduccion/` y sigue el índice.
+---
 
-Para actualizar el material en cada clase:
+### Fuentes y Documentación Oficial
 
-```bash
-git pull
-```
-
-## Cómo trabajar durante el curso
-
-- **Escribe el código tú mismo/a**, no copies y pegues: así se aprende.
-- **Modifica los ejemplos**, rómpelos y arréglalos. Es la mejor forma de entenderlos.
-- **Pregunta** cualquier duda, por básica que parezca.
-
-¡Empezamos!
+En esta presentación no he utilizado fuentes técnicas externas; cada clase incluye al final su propia documentación oficial.
