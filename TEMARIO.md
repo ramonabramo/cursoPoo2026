@@ -1,21 +1,36 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Cada bloque tendrá su carpeta con apuntes, ejemplos y ejercicios.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 6 ya están publicadas; a partir de la Parte 1, la numeración corresponde a **bloques temáticos** (cada bloque puede ocupar una o varias clases) y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios.
 
-## Parte 0: Preparación
+## Parte 0: Introducción y entorno (clases 1 a 6)
 
-### 00. Entorno de desarrollo
-- Instalación de Laragon 6, VS Code, Git y Composer
-- Cambio de versión de PHP y MySQL en Laragon
-- Primer proyecto y comprobación del entorno
+### Clase 1. El mundo de la programación hoy · [ver](clase-01-mundo-programacion/README.md)
+- Qué es programar y qué es un lenguaje de programación
+- Programación de escritorio frente a programación web
+- Cliente, servidor y HTTP
+- Frontend, backend y fullstack
+- HTML, CSS, JavaScript, PHP, MySQL y Laravel: qué hace cada uno
+- Recorrido del curso (solo teoría, sin instalar nada)
 
-## Parte 1: PHP desde cero
+### Clase 2. Entorno de desarrollo con Laragon · [ver](clase-02-entorno-laragon/README.md)
+- Instalación de Laragon 6 (última versión con licencia gratuita)
+- Cambio de versión de PHP: siempre versiones NTS
+- Cambio de versión de MySQL y copia de los datos
+- Carpeta raíz de los proyectos y cómo cambiarla
+- Virtual hosts automáticos (`proyecto.test`)
 
-### 01. Introducción a PHP y a la programación web
-- Cliente, servidor, HTTP: petición y respuesta
-- Qué es PHP y cómo se ejecuta (`phpinfo`)
-- Formularios GET y POST, `$_SERVER`
-- Primera idea de seguridad: XSS y `htmlspecialchars`
+### Clase 3. Visual Studio Code y sus extensiones · [ver](clase-03-visual-studio-code/README.md)
+- Instalación y uso básico
+- Extensiones generales, de PHP, de HTML, CSS y JavaScript, de Laravel, de Git y de bases de datos
+- Ajustes recomendados y atajos de teclado
+
+### Clases 4 a 6. Primeros pasos con PHP · [ver](clase-04-primeros-pasos-php/README.md)
+> Ejemplos de introducción para entender la programación web. Cada tema se estudia en profundidad en los bloques siguientes.
+- **Clase 4:** qué es PHP, `phpinfo()`, primer script, sintaxis básica, variables, tipos y operadores
+- **Clase 5:** condicionales, `switch` y `match`, bucles, sintaxis alternativa, arrays y funciones
+- **Clase 6:** formularios GET y POST, errores frecuentes, primera conexión con MySQL (PDO) y ejercicios
+
+## Parte 1: PHP en profundidad
 
 ### 02. Fundamentos del lenguaje
 - Sintaxis, etiquetas, comentarios, `echo` y `print`
