@@ -43,15 +43,27 @@ Al terminar el curso seréis capaces de:
 | **3** | [🧩 Visual Studio Code y sus extensiones](clase-03-visual-studio-code/README.md) | Extensiones para PHP, HTML, CSS, JavaScript y Laravel, ajustes y atajos |
 | **4 a 6** | [🐘 Primeros pasos con PHP](clase-04-primeros-pasos-php/README.md) | Ejemplos de introducción: phpinfo, sintaxis, variables, operadores, condicionales, bucles, arrays, funciones, formularios, errores y primera conexión con MySQL |
 
+### PHP paso a paso
+
+| Clase | Tema | Contenido |
+|---|---|---|
+| **7** | [🔢 Datos y operadores, ahora con calma](clase-07-datos-y-operadores/README.md) | Tipos, comillas, constantes, conversiones, `===`, `??`, ternario y formato de números |
+| **8** | [🔀 Decidir y repetir](clase-08-decidir-y-repetir/README.md) | Pseudocódigo, `if` sin anidar, `match`, qué bucle elegir, contador, acumulador y máximo |
+| **9** | [🧰 Funciones](clase-09-funciones/README.md) | `echo` frente a `return`, parámetros, argumentos con nombre, tipos, `strict_types` y ámbito |
+| **10** | [🗂️ Arrays y textos](clase-10-arrays-y-textos/README.md) | Arrays asociativos y tablas de datos, ordenar, `array_map`, textos con tildes, validar y fechas |
+| **11** | [📝 Formularios, archivos y ficheros](clase-11-formularios-archivos/README.md) | Validar y escapar, XSS, ficheros JSON, *Post/Redirect/Get* y subida de archivos |
+| **12** | [🔐 Sesiones, login y seguridad](clase-12-sesiones-seguridad/README.md) | Cookies y sesiones, contraseñas cifradas, login completo, XSS, inyección SQL y CSRF |
+| **13** | [🧩 Organizar el código y controlar los errores](clase-13-organizar-codigo-errores/README.md) | `require_once`, cabecera y pie comunes, leer errores, depurar y excepciones |
+
 ### Lo que viene después
 
-A partir de aquí iremos añadiendo clases. Este es el recorrido previsto:
+A partir de aquí iremos añadiendo clases. Este es el recorrido previsto (en el temario veréis marcado con ⭐ lo que es «para saber más»):
 
 | Parte | Contenido |
 |---|---|
-| 🐘 **PHP en profundidad** | Fundamentos del lenguaje, estructuras de control, funciones, arrays y cadenas, formularios, sesiones, ficheros y errores |
-| 🐬 **SQL con MySQL** (en paralelo) | Diseño de tablas, consultas, funciones, agrupaciones, JOINs, subconsultas, transacciones e índices |
-| 🧱 **Programación orientada a objetos** | Clases y objetos, herencia, interfaces, traits, namespaces, Composer, PDO, principios SOLID y patrones |
+| 🐬 **SQL con MySQL** (en paralelo) | Diseño de tablas, consultas, funciones, agrupaciones y JOINs; como ampliación, subconsultas, transacciones e índices |
+| 🗄️ **Bases de datos con PHP** | PDO, consultas preparadas, transacciones y un proyecto CRUD completo |
+| 🧱 **Programación orientada a objetos** | Clases y objetos, herencia, interfaces, traits, enums, namespaces, Composer y buenas prácticas |
 | 🏗️ **Nuestro propio MVC** | Front controller, router, controladores, vistas, modelos y API REST |
 | 🚀 **Laravel** | Rutas, Blade, migraciones, Eloquent, validación, autenticación, API, pruebas y despliegue |
 
@@ -73,6 +85,12 @@ cursoPoo2026/
 ├── clase-03-visual-studio-code/     ← Clase 3: VS Code y extensiones
 ├── clase-04-primeros-pasos-php/     ← Clases 4 a 6: ejemplos de introducción a PHP
 │   └── ejemplos/                    ← Todos los ejemplos, numerados en orden
+├── clase-07-datos-y-operadores/     ← Clases 7 a 13: PHP paso a paso
+│   ├── ejemplos/                    ← Los ejemplos de la explicación
+│   └── soluciones/                  ← Una solución de cada ejercicio
+├── clase-08-decidir-y-repetir/
+├── ...
+├── clase-13-organizar-codigo-errores/
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 

@@ -347,7 +347,7 @@ echo $entrega->format("d/m/Y");   // 21/11/2026
 ---
 
 **Clase anterior:** 👈 [Clase 9 · Funciones](../clase-09-funciones/README.md)
-**Clase siguiente:** 👉 [Clase 11 · Formularios, sesiones y archivos](../clase-11-formularios-sesiones/README.md)
+**Clase siguiente:** 👉 [Clase 11 · Formularios, archivos y ficheros](../clase-11-formularios-archivos/README.md)
 
 ---
 
