@@ -1079,7 +1079,7 @@ Cread un archivo por ejercicio dentro de `C:\laragon\www\php-basico` y probadlo 
 ---
 
 **Clase anterior:** 👈 [Clase 3 · Visual Studio Code y sus extensiones](../clase-03-visual-studio-code/README.md)
-**Siguiente bloque:** fundamentos del lenguaje en profundidad (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 7 · Datos y operadores, ahora con calma](../clase-07-datos-y-operadores/README.md)
 
 ---
 
