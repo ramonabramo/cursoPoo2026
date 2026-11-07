@@ -277,6 +277,40 @@ Si ahora os parece raro, tranquilos. Es normal. Quedaos con la idea y lo retomam
 | **Devolved** con `return`; el `echo`, fuera | |
 | **Tipos** en parámetros y retorno, y `strict_types` arriba | `function esPar(int $n): bool` |
 
+### El orden de un programa
+
+Ahora que tenéis funciones, os pido que ordenéis **todos** vuestros programas siempre igual. Así, cuando abráis un archivo (vuestro o de un compañero), sabréis dónde está cada cosa sin buscar:
+
+| Orden | Parte | Qué va aquí | Ejemplo |
+|---|---|---|---|
+| 1 | **Funciones** | Todas las funciones del archivo | `function precioFinal(...)` |
+| 2 | **Inicialización** | Las variables con su valor de partida | `$errores = [];`, `$total = 0;` |
+| 3 | **Entradas** | Los datos que llegan de fuera: formularios, URL, sesión, ficheros | `$nombre = $_POST["nombre"] ?? "";` |
+| 4 | **Procesamiento** | Los cálculos y las decisiones | validar, sumar, guardar… |
+| 5 | **Salidas** | Lo que se muestra al usuario | `echo` o el HTML |
+
+```php
+<?php
+declare(strict_types=1);
+
+function precioConIva(float $precio): float
+{
+    return round($precio * 1.21, 2);
+}
+
+$unidades = 3;
+
+$precio = (float) ($_GET["precio"] ?? 10);
+
+$total = precioConIva($precio) * $unidades;
+
+echo "Total: {$total} €";
+```
+
+Fijaos en que no hace falta escribir comentarios con los nombres de cada parte: basta con **respetar el orden** y separar los bloques con una línea en blanco. En ejemplos de tres líneas no tiene sentido, pero en cuanto el programa crece, lo agradeceréis.
+
+> 💡 Más adelante, cuando lleguen las **clases** de la programación orientada a objetos, irán todavía antes que las funciones.
+
 ---
 
 ## <img src="../img/emojis/genial.webp" width="40" alt=""> 8. Ejercicios
@@ -305,6 +339,7 @@ Empezad todos los archivos con `declare(strict_types=1);` y poned tipos a los pa
 | `strict_types` | Primera línea del archivo; si el tipo no coincide, `TypeError` |
 | Ámbito | Lo de dentro se queda dentro: los datos entran por parámetros |
 | Flecha | `fn($x) => $x * 2`: funciones de una línea (las veremos más) |
+| Orden | Funciones → inicialización → entradas → procesamiento → salidas |
 
 ---
 

@@ -160,12 +160,15 @@ Los usuarios están en [`usuarios.php`](ejemplos/login/usuarios.php), un archivo
 
 ```php
 <?php
+$error = "";
+
 session_start();
 $usuarios = require __DIR__ . "/usuarios.php";
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$usuario = trim($_POST["usuario"] ?? "");
+$clave = $_POST["clave"] ?? "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $usuario = trim($_POST["usuario"] ?? "");
-    $clave = $_POST["clave"] ?? "";
+if ($esEnvio) {
     $datos = $usuarios[$usuario] ?? null;
 
     if ($datos !== null && password_verify($clave, $datos["hash"])) {

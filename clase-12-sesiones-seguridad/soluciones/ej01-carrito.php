@@ -1,21 +1,25 @@
 <?php
 declare(strict_types=1);
 
-session_start();
+function euros(float $cantidad): string
+{
+    return number_format($cantidad, 2, ",", ".") . " €";
+}
 
 $productos = [
     1 => ["nombre" => "Camiseta", "precio" => 15.00],
     2 => ["nombre" => "Gorra",    "precio" => 9.50],
     3 => ["nombre" => "Taza",     "precio" => 7.95],
 ];
+$total = 0;
 
-// El carrito es un array en la sesión: [idProducto => cantidad]
-$_SESSION["carrito"] ??= [];
+session_start();
+$_SESSION["carrito"] ??= [];   // el carrito: [idProducto => cantidad]
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$accion = $_POST["accion"] ?? "";
+$id = (int) ($_POST["id"] ?? 0);
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $accion = $_POST["accion"] ?? "";
-    $id = (int) ($_POST["id"] ?? 0);
-
+if ($esEnvio) {
     if ($accion === "anadir" && isset($productos[$id])) {
         $_SESSION["carrito"][$id] = ($_SESSION["carrito"][$id] ?? 0) + 1;
     } elseif ($accion === "quitar") {
@@ -28,14 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit;
 }
 
-$total = 0;
-foreach ($_SESSION["carrito"] as $id => $cantidad) {
-    $total += $productos[$id]["precio"] * $cantidad;
-}
-
-function euros(float $cantidad): string
-{
-    return number_format($cantidad, 2, ",", ".") . " €";
+foreach ($_SESSION["carrito"] as $idProducto => $cantidad) {
+    $total += $productos[$idProducto]["precio"] * $cantidad;
 }
 ?>
 <!DOCTYPE html>
@@ -56,12 +54,12 @@ function euros(float $cantidad): string
     <p>Está vacío.</p>
 <?php else: ?>
     <ul>
-        <?php foreach ($_SESSION["carrito"] as $id => $cantidad): ?>
+        <?php foreach ($_SESSION["carrito"] as $idProducto => $cantidad): ?>
             <li>
-                <?= $cantidad ?> x <?= $productos[$id]["nombre"] ?> = <?= euros($productos[$id]["precio"] * $cantidad) ?>
+                <?= $cantidad ?> x <?= $productos[$idProducto]["nombre"] ?> = <?= euros($productos[$idProducto]["precio"] * $cantidad) ?>
                 <form method="post" style="display:inline">
                     <input type="hidden" name="accion" value="quitar">
-                    <input type="hidden" name="id" value="<?= $id ?>">
+                    <input type="hidden" name="id" value="<?= $idProducto ?>">
                     <button>Quitar</button>
                 </form>
             </li>

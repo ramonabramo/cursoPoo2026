@@ -1,36 +1,48 @@
 <?php
 declare(strict_types=1);
 
+// Comprueba la foto subida. Devuelve el mensaje de error o "" si es correcta
+function validarFoto(?array $foto, array $tiposPermitidos, int $tamanoMaximo): string
+{
+    if ($foto === null || $foto["error"] !== UPLOAD_ERR_OK) {
+        return "No se ha recibido ningún archivo o ha fallado la subida.";
+    }
+    if ($foto["size"] > $tamanoMaximo) {
+        return "La foto no puede pasar de 2 MB.";
+    }
+
+    // Comprobamos que de verdad es una imagen mirando su CONTENIDO, no su nombre
+    $info = getimagesize($foto["tmp_name"]);
+    $tipo = $info["mime"] ?? "";
+    if (!isset($tiposPermitidos[$tipo])) {
+        return "Solo se permiten imágenes JPG, PNG o WEBP.";
+    }
+
+    return "";
+}
+
+$tiposPermitidos = ["image/jpeg" => "jpg", "image/png" => "png", "image/webp" => "webp"];
+$tamanoMaximo = 2 * 1024 * 1024;   // 2 MB en bytes
 $mensaje = "";
 $fotoSubida = "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $foto = $_FILES["foto"] ?? null;
-    $tiposPermitidos = ["image/jpeg" => "jpg", "image/png" => "png", "image/webp" => "webp"];
-    $tamanoMaximo = 2 * 1024 * 1024;   // 2 MB en bytes
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$foto = $_FILES["foto"] ?? null;
 
-    if ($foto === null || $foto["error"] !== UPLOAD_ERR_OK) {
-        $mensaje = "No se ha recibido ningún archivo o ha fallado la subida.";
-    } elseif ($foto["size"] > $tamanoMaximo) {
-        $mensaje = "La foto no puede pasar de 2 MB.";
-    } else {
-        // Comprobamos que de verdad es una imagen mirando su CONTENIDO, no su nombre
-        $info = getimagesize($foto["tmp_name"]);
-        $tipo = $info["mime"] ?? "";
+if ($esEnvio) {
+    $mensaje = validarFoto($foto, $tiposPermitidos, $tamanoMaximo);
 
-        if (!isset($tiposPermitidos[$tipo])) {
-            $mensaje = "Solo se permiten imágenes JPG, PNG o WEBP.";
+    if ($mensaje === "") {
+        // Nombre nuevo y aleatorio: nunca usamos el nombre original
+        $tipo = getimagesize($foto["tmp_name"])["mime"];
+        $nombreFinal = bin2hex(random_bytes(8)) . "." . $tiposPermitidos[$tipo];
+        $destino = __DIR__ . "/uploads/" . $nombreFinal;
+
+        if (move_uploaded_file($foto["tmp_name"], $destino)) {
+            $mensaje = "¡Foto subida!";
+            $fotoSubida = "uploads/" . $nombreFinal;
         } else {
-            // Nombre nuevo y aleatorio: nunca usamos el nombre original
-            $nombreFinal = bin2hex(random_bytes(8)) . "." . $tiposPermitidos[$tipo];
-            $destino = __DIR__ . "/uploads/" . $nombreFinal;
-
-            if (move_uploaded_file($foto["tmp_name"], $destino)) {
-                $mensaje = "¡Foto subida!";
-                $fotoSubida = "uploads/" . $nombreFinal;
-            } else {
-                $mensaje = "No se ha podido guardar la foto.";
-            }
+            $mensaje = "No se ha podido guardar la foto.";
         }
     }
 }
