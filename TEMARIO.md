@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 23 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 24 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -280,11 +280,15 @@
 - Errores 404 y 405 y página 500 con el manejador global de errores
 - El modo depuración y por qué se desactiva en producción
 
-### 18. Controladores, vistas y modelos
-- Controlador base
-- Motor de vistas y *layouts*
-- Modelo base con PDO (mini ORM)
-- Configuración y variables de entorno (`.env`)
+### Clase 24 · Bloque 18. Controladores, vistas y modelos · [ver](clase-24-controladores-vistas-modelos/README.md)
+- Configuración y variables de entorno en un `.env` (y por qué no se sube a Git)
+- Un modelo base (mini ORM) al estilo de Eloquent: `Curso::buscar()`, `$curso->guardar()`
+- Enlace estático tardío (`static::`) y lista blanca de columnas
+- *Repository* frente a *Active Record*
+- Motor de vistas con *layout* y vistas parciales
+- Controlador base: `vista()`, `redirigir()`, `noEncontrado()` y CSRF
+- Excepciones HTTP para los errores 403, 404 y 405
+- Las siete rutas y acciones de un recurso; código 422 para datos no válidos
 
 ### 19. Servicios del framework
 - Contenedor de inyección de dependencias
