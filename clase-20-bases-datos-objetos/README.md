@@ -384,7 +384,7 @@ Como en la clase 15, las soluciones se copian **dentro del proyecto**: los archi
 ---
 
 **Clase anterior:** 👈 [Clase 19 · Namespaces, Composer y autocarga](../clase-19-namespaces-composer/README.md)
-**Siguiente bloque:** calidad y buenas prácticas (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 21 · Calidad y buenas prácticas](../clase-21-calidad-buenas-practicas/README.md)
 
 ---
 

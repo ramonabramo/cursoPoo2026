@@ -71,6 +71,7 @@ Al terminar el curso seréis capaces de:
 | **18** | [✨ PHP moderno y POO avanzada](clase-18-php-moderno/README.md) | `?tipo` y tipos unión, `?->`, enums, clases `readonly`, `__toString`, `clone` y excepciones propias |
 | **19** | [📦 Namespaces, Composer y autocarga](clase-19-namespaces-composer/README.md) | Namespaces y `use`, autocarga, PSR-4, Composer e instalación de librerías como Carbon |
 | **20** | [🗄️ Bases de datos con objetos](clase-20-bases-datos-objetos/README.md) | El CRUD rehecho con una clase de conexión, entidades, repositorios y excepciones propias |
+| **21** | [🧹 Calidad y buenas prácticas](clase-21-calidad-buenas-practicas/README.md) | Nombres, funciones cortas, PSR-12, errores globales, inyección de dependencias, SOLID y herramientas |
 
 ### Lo que viene después
 
@@ -115,6 +116,7 @@ cursoPoo2026/
 ├── clase-18-php-moderno/           ← Clase 18: PHP moderno y POO avanzada
 ├── clase-19-namespaces-composer/   ← Clase 19: namespaces, Composer y autocarga
 ├── clase-20-bases-datos-objetos/   ← Clase 20: el CRUD con objetos (carpeta proyecto/)
+├── clase-21-calidad-buenas-practicas/ ← Clase 21: calidad y buenas prácticas
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 

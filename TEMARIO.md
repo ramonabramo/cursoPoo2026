@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 20 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 21 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -188,15 +188,16 @@
 - La sesión en una clase; `files` en la autocarga de Composer
 - ⭐ Un repositorio en memoria con la misma interfaz
 
-### 15. Calidad y buenas prácticas
-- Código limpio: nombres, funciones cortas, DRY y KISS
-- Estilo de código PSR-12
-- Manejo global de excepciones
+### Clase 21 · Bloque 15. Calidad y buenas prácticas · [ver](clase-21-calidad-buenas-practicas/README.md)
+- Qué es código de calidad: se lee, se cambia sin miedo y se puede probar
+- Nombres que se explican solos; números mágicos con nombre
+- Funciones cortas; DRY, KISS y YAGNI
+- Estilo común con PSR-12 y formateo automático
+- Manejo global de errores con `set_exception_handler()` y `set_error_handler()`
 - Inyección de dependencias explicada sin complicaciones
-- Primeros principios SOLID con ejemplos
-- ⭐ Análisis estático con PHPStan
-- ⭐ Pruebas unitarias con PHPUnit
-- ⭐ Patrones de diseño: *Singleton*, *Factory*, *Strategy* y *Observer*
+- Principios SOLID, con ejemplos de responsabilidad única y abierto/cerrado
+- ⭐ PHPStan, PHPUnit y PHP-CS-Fixer en un proyecto pequeño
+- ⭐ Patrones de diseño: *Repository*, *Singleton*, *Factory*, *Strategy* y *Observer*
 
 ## Itinerario paralelo: SQL con MySQL
 
