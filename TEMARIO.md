@@ -1,6 +1,8 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 6 ya están publicadas; a partir de la Parte 1, la numeración corresponde a **bloques temáticos** (cada bloque puede ocupar una o varias clases) y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 13 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+>
+> 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
 ## Parte 0: Introducción y entorno (clases 1 a 6)
 
@@ -25,100 +27,154 @@
 - Ajustes recomendados y atajos de teclado
 
 ### Clases 4 a 6. Primeros pasos con PHP · [ver](clase-04-primeros-pasos-php/README.md)
-> Ejemplos de introducción para entender la programación web. Cada tema se estudia en profundidad en los bloques siguientes.
+> Ejemplos de introducción para entender la programación web. Cada tema se estudia en profundidad en la Parte 1.
 - **Clase 4:** qué es PHP, `phpinfo()`, primer script, sintaxis básica (`echo` y echo corto `<?=`), variables, tipos y operadores
 - **Clase 5:** condicionales, `switch` y `match`, bucles, sintaxis alternativa, arrays y funciones
 - **Clase 6:** formularios GET y POST, errores frecuentes, primera conexión con MySQL (PDO) y ejercicios
 
-## Parte 1: PHP en profundidad
+## Parte 1: PHP paso a paso (clases 7 a 13)
 
-### 02. Fundamentos del lenguaje
-- Sintaxis, etiquetas, comentarios, `echo` y `print`
-- Variables, constantes y tipos de datos
-- Conversión de tipos, `null`, comparación estricta (`==` vs `===`)
-- Operadores: aritméticos, comparación, lógicos, asignación, `??`, `?->`
+> Volvemos sobre lo visto en las clases 4 a 6, ahora despacio y con ejercicios resueltos. Todas las clases se trabajan en el proyecto `php-paso-a-paso` de Laragon.
 
-### 03. Estructuras de control
-- `if`, `else`, `elseif`, `switch` y `match`
-- Bucles: `for`, `while`, `do while`, `foreach`
-- `break`, `continue` y sintaxis alternativa para plantillas
+### Clase 7 · Bloque 02. Datos y operadores · [ver](clase-07-datos-y-operadores/README.md)
+- Las variables como cajas con etiqueta; los cinco tipos básicos y `var_dump()`
+- Textos: comillas simples, dobles y llaves (`"{$variable}"`)
+- Constantes con `const` y `define()`
+- Conversión de tipos automática y forzada (*casting*); qué valores son «falsos»
+- Comparación estricta: `==` frente a `===`
+- `null`, el operador `??` y el operador ternario
+- Operadores lógicos, precedencia y paréntesis (y por qué no usar `and`/`or`)
+- Redondear y mostrar números: `round()`, `number_format()`, `intdiv()` y `%`
+- Errores típicos: olvidar el `$`, guiones en los nombres, `echo` de un `false`
 
-### 04. Funciones
-- Parámetros, valores por defecto y argumentos con nombre
-- Tipado de parámetros y retorno, `declare(strict_types=1)`
-- Ámbito de variables, paso por valor y por referencia
-- Funciones anónimas, *closures* y *arrow functions*
-- Funciones variádicas
+### Clase 8 · Bloque 03. Decidir y repetir · [ver](clase-08-decidir-y-repetir/README.md)
+- Pensar antes de programar: pseudocódigo y pruebas de todos los caminos
+- `if`, `elseif` y `else` sin anidar: descartar primero los casos que no cumplen
+- La trampa de `if ($x = 10)`
+- `match` (y `UnhandledMatchError`) frente a `elseif`
+- Qué bucle elegir: `for`, `while`, `do while` y `foreach`
+- Patrones imprescindibles: contador, acumulador y buscar el máximo
+- Bucles infinitos, `break`, `continue` y bucles anidados
 
-### 05. Arrays y cadenas
-- Arrays indexados, asociativos y multidimensionales
-- Funciones de arrays: `array_map`, `array_filter`, `array_reduce`, ordenación…
-- Desestructuración y operador *spread*
-- Funciones de cadenas y expresiones regulares
-- Fechas y horas con `DateTime`
+### Clase 9 · Bloque 04. Funciones · [ver](clase-09-funciones/README.md)
+- Por qué usar funciones: el principio DRY
+- `echo` frente a `return`
+- Parámetros con valor por defecto y argumentos con nombre
+- Tipos de parámetros y de retorno (`void`, `bool`…) y `declare(strict_types=1)`
+- Ámbito de las variables
+- Primer vistazo a las funciones flecha (`fn`)
+- Cómo escribir buenas funciones
+- ⭐ Paso por referencia, funciones variádicas y *closures* con `use` (se retoman en la Parte 2)
 
-### 06. Formularios, sesiones y archivos
-- Validación y saneamiento de datos
-- Subida de archivos
-- Cookies y sesiones
-- Lectura y escritura de ficheros (JSON, CSV)
-- Redirecciones y patrón *Post/Redirect/Get*
+### Clase 10 · Bloque 05. Arrays y textos · [ver](clase-10-arrays-y-textos/README.md)
+- Arrays indexados, asociativos y multidimensionales (tablas de datos)
+- Añadir, modificar y eliminar elementos; `print_r()`
+- Funciones útiles: `count`, `in_array`, `array_key_exists`, `array_search`, `array_merge`…
+- Ordenar: `sort`, `rsort`, `asort`, `arsort` y `ksort`
+- `array_map()` y `array_filter()`
+- Textos con tildes: funciones `mb_`; `trim`, `str_contains`, `str_replace`…
+- `explode()` e `implode()`
+- Validar emails con `filter_var()`; ⭐ primeras expresiones regulares
+- Fechas con `date()` y `DateTime`; zona horaria
+- ⭐ Desestructuración, operador *spread* (`...`) y `array_reduce`
 
-### 07. Organización del código y errores
-- `include`, `require` y reutilización de código
-- Tipos de errores, `error_reporting` y registro de errores
-- Depuración (`var_dump`, Xdebug)
-- Introducción a las excepciones: `try`, `catch`, `finally`
+### Clase 11 · Bloque 06 (I). Formularios, archivos y ficheros · [ver](clase-11-formularios-archivos/README.md)
+- `$_GET` y `$_POST`: cuándo usar cada uno
+- El patrón del formulario profesional: `REQUEST_METHOD`, recoger, validar y conservar datos
+- Validar en el servidor con `filter_var()`, longitudes y listas de valores
+- Escapar la salida con `htmlspecialchars()` y ataques XSS
+- Guardar datos en ficheros JSON
+- Patrón *Post/Redirect/Get*, `header()` y `exit`
+- Subida de archivos con `$_FILES` de forma segura
+- ⭐ Leer y escribir ficheros CSV
 
-## Parte 2: Programación orientada a objetos
+### Clase 12 · Bloque 06 (II). Sesiones, login y seguridad · [ver](clase-12-sesiones-seguridad/README.md)
+- Por qué la web no tiene memoria: cookies frente a sesiones
+- Sesiones con `session_start()` y `$_SESSION`
+- Cookies con `setcookie()` y sus opciones de seguridad
+- Contraseñas con `password_hash()` y `password_verify()`
+- Un login completo: inicio de sesión, páginas protegidas y cierre de sesión
+- Los tres ataques que hay que conocer: XSS, inyección SQL y CSRF
+- Tokens CSRF en los formularios
 
-### 08. Clases y objetos
-- Conceptos: clase, objeto, propiedad, método
-- Constructor y destructor, `$this`
-- Visibilidad: `public`, `protected`, `private`
-- Encapsulación: *getters* y *setters*
+### Clase 13 · Bloque 07. Organizar el código y controlar los errores · [ver](clase-13-organizar-codigo-errores/README.md)
+- `include`, `require` y `require_once`; rutas con `__DIR__`
+- Una web con cabecera, menú y pie comunes
+- Leer los mensajes de error: *parse error*, *fatal error*, `TypeError`, *warning*…
+- Depurar con método: `var_dump()`, `print_r()` y `dd()`; ⭐ Xdebug
+- Excepciones: `try`, `catch`, `finally` y `throw`
+- Errores en desarrollo y en producción: `display_errors` y registro de errores
+
+## Parte 2: Bases de datos con PHP
+
+> Antes del bloque 08 conviene haber visto los bloques S01 a S06 del itinerario de SQL.
+
+### 08. Bases de datos con PDO
+- Repaso: tablas, claves primarias y las cuatro consultas básicas (`SELECT`, `INSERT`, `UPDATE`, `DELETE`)
+- Conexión con PDO: DSN, `utf8mb4` y modo de errores con excepciones
+- Consultas preparadas con `prepare()` y `execute()`: adiós a la inyección SQL
+- Recorrer resultados con `fetch()` y `fetchAll()`
+- Transacciones: todo o nada (`beginTransaction`, `commit`, `rollBack`)
+
+### 09. Proyecto CRUD paso a paso
+- Estructura de carpetas del proyecto
+- Listado con buscador y paginación
+- Alta con validación
+- Edición con formulario precargado
+- Borrado seguro: siempre por POST y con confirmación (nunca por GET)
+- Login contra la base de datos con contraseñas cifradas
+
+## Parte 3: Programación orientada a objetos
+
+### 10. Clases y objetos
+- La idea: modelar cosas del mundo real (clase = plano, objeto = casa construida)
+- Propiedades, métodos y `$this`
+- Constructor y promoción de propiedades en el constructor
+- Visibilidad: `public`, `private` y `protected`; encapsulación con *getters* y *setters*
+- Propiedades `readonly`
 - Propiedades y métodos estáticos, constantes de clase
-- Promoción de propiedades en el constructor y propiedades `readonly`
 
-### 09. Herencia y polimorfismo
-- Herencia, `extends`, `parent::`
+### 11. Herencia, interfaces y polimorfismo
+- Herencia con `extends` y `parent::`
 - Clases y métodos abstractos, `final`
-- Interfaces
-- Polimorfismo
-- Traits
+- Interfaces: contratos con `implements`
+- Polimorfismo explicado con ejemplos cotidianos
+- Traits: reutilizar código sin herencia
+
+### 12. PHP moderno y POO avanzada
 - Enumeraciones (`enum`)
+- Clases `readonly`
+- Operador *nullsafe* (`?->`)
+- Tipos *nullable* (`?string`) y *union* (`int|float`)
+- Excepciones personalizadas
+- `__toString()` y comparación de objetos
+- ⭐ Otros métodos mágicos, clonación, enlace estático tardío (`static::`) y tipos *intersection*
 
-### 10. POO avanzada
-- Métodos mágicos (`__toString`, `__get`, `__call`…)
-- Clonación y comparación de objetos
-- Enlace estático tardío (`static::`)
-- Tipos *union*, *nullable* e *intersection*
-- Excepciones personalizadas y jerarquía de excepciones
-
-### 11. Namespaces, autoloading y Composer
+### 13. Namespaces, Composer y autoloading
 - Namespaces y `use`
-- Autoloading con `spl_autoload_register`
-- Estándares PSR-1, PSR-4 y PSR-12
-- Composer: `composer.json`, dependencias, `composer.lock`, scripts
+- Adiós a los `require`: autoloading con PSR-4
+- Composer: `composer.json`, instalar dependencias, `composer.lock`
 - Uso de paquetes de terceros
+- ⭐ `spl_autoload_register` y scripts de Composer
 
-### 12. Bases de datos con PDO
-- Requisito: haber visto al menos los bloques S01 a S06 del itinerario de SQL
-- Conexión con PDO y manejo de errores
-- Consultas preparadas (evitar inyección SQL)
-- CRUD completo
-- Transacciones
-- Patrones DAO y *Repository*
+### 14. Bases de datos con objetos
+- Una clase de conexión a la base de datos
+- Patrón *Repository*: las consultas, en su propia clase
+- Rehacer el CRUD con clases
 
-### 13. Buenas prácticas y patrones de diseño
-- Principios SOLID, DRY y KISS
-- Inyección de dependencias
-- Patrones: *Singleton*, *Factory*, *Strategy*, *Observer*
-- Pruebas unitarias con PHPUnit
+### 15. Calidad y buenas prácticas
+- Código limpio: nombres, funciones cortas, DRY y KISS
+- Estilo de código PSR-12
+- Manejo global de excepciones
+- Inyección de dependencias explicada sin complicaciones
+- Primeros principios SOLID con ejemplos
+- ⭐ Análisis estático con PHPStan
+- ⭐ Pruebas unitarias con PHPUnit
+- ⭐ Patrones de diseño: *Singleton*, *Factory*, *Strategy* y *Observer*
 
 ## Itinerario paralelo: SQL con MySQL
 
-> Se imparte a lo largo del curso, **antes de empezar PDO (bloque 12)**: lo ideal es empezar tras el bloque 03 o 04 e ir alternando con PHP. Va de lo más básico a consultas avanzadas, siempre con MySQL.
+> Se imparte a lo largo del curso, **antes de empezar PDO (bloque 08)**: lo ideal es empezar tras la clase 8 o 9 e ir alternando con PHP. Los bloques S01 a S06 son **imprescindibles**; S07 a S09 son de **ampliación** ⭐ y se pueden dejar para el final.
 
 ### S01. Introducción a las bases de datos
 - Qué es una base de datos y modelo relacional: tablas, filas, columnas, claves
@@ -149,89 +205,93 @@
 ### S06. Diseño relacional y JOINs
 - Diagramas entidad-relación y relaciones 1:1, 1:N y N:M
 - Claves foráneas e integridad referencial
-- Normalización (1FN, 2FN, 3FN)
-- `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `CROSS JOIN` y *self join*
+- Normalización explicada con ejemplos (1FN, 2FN, 3FN)
+- `INNER JOIN` y `LEFT JOIN` (⭐ `RIGHT JOIN`, `CROSS JOIN` y *self join*)
+- Taller: diseño de la base de datos de una academia, paso a paso
 
-### S07. Consultas avanzadas
+### S07. ⭐ Consultas avanzadas
 - Subconsultas y subconsultas correlacionadas, `EXISTS`
 - `UNION` y operaciones de conjuntos
 - Expresiones de tabla comunes (`WITH`) y recursivas
 - Funciones de ventana: `ROW_NUMBER`, `RANK`, `LAG`, `LEAD`, `SUM() OVER`
 - Vistas
 
-### S08. Transacciones, índices y rendimiento
+### S08. ⭐ Transacciones, índices y rendimiento
 - Transacciones y propiedades ACID, niveles de aislamiento
 - Índices y análisis de consultas con `EXPLAIN`
 - Optimización de consultas
 - Motores de almacenamiento (InnoDB)
 
-### S09. Programación en MySQL y administración
+### S09. ⭐ Programación en MySQL y administración
 - Procedimientos almacenados y funciones
 - *Triggers* y eventos
 - Trabajo con `JSON` en MySQL
 - Usuarios y privilegios
 - Copias de seguridad y restauración (`mysqldump`), importación y exportación
 
-## Parte 3: Construimos nuestro propio MVC
+## Parte 4: Construimos nuestro propio MVC
 
 > Objetivo: construir paso a paso un pequeño *framework* MVC para entender cómo funcionan Laravel y cualquier otro framework por dentro.
 
-### 14. Arquitectura MVC y *front controller*
-- Qué es MVC y por qué se usa
+### 16. Arquitectura MVC y *front controller*
+- Qué es MVC y por qué se usa: la analogía del restaurante (sala, cocina y despensa)
 - Estructura de carpetas del proyecto
 - Punto de entrada único (`public/index.php`) y reescritura de URLs (`.htaccess`)
 
-### 15. Router, peticiones y respuestas
+### 17. Router, peticiones y respuestas
 - Clases `Request` y `Response`
 - Router: rutas, métodos HTTP y parámetros dinámicos
 - Gestión de errores 404 y 500
 
-### 16. Controladores, vistas y modelos
+### 18. Controladores, vistas y modelos
 - Controlador base
 - Motor de vistas y *layouts*
 - Modelo base con PDO (mini ORM)
 - Configuración y variables de entorno (`.env`)
 
-### 17. Servicios del framework
+### 19. Servicios del framework
 - Contenedor de inyección de dependencias
 - Middleware
 - Validación, sesiones y mensajes *flash*
 - Autenticación sencilla
 - Comparativa: qué parte de nuestro MVC equivale a cada pieza de Laravel
 
-### 18. APIs REST con PHP puro
+### 20. APIs REST con PHP puro
 - JSON, códigos de estado HTTP y verbos REST
+- Cabeceras HTTP con `header()` y `http_response_code()`
+- Recibir datos en JSON (`php://input`)
 - API de ejemplo con nuestro MVC
-- Probar la API con herramientas como Postman o `curl`
+- Consumir APIs externas con cURL
+- Probar la API con las herramientas del navegador, Postman o `curl`
 
-## Parte 4: Laravel 13
+## Parte 5: Laravel 13
 
-### 19. Primeros pasos con Laravel
+### 21. Primeros pasos con Laravel
 - Instalación y estructura del proyecto
 - Ciclo de vida de una petición
 - Configuración y archivo `.env`
 - Artisan y comandos básicos
 - Frontend con Vite
 
-### 20. Rutas y controladores
+### 22. Rutas y controladores
 - Rutas básicas, con parámetros, nombradas y agrupadas
 - Controladores y controladores de recurso
 - *Route model binding*
 - Rutas de la API y de la consola
 
-### 21. Vistas con Blade
+### 23. Vistas con Blade
 - Sintaxis y directivas de Blade
 - *Layouts*, secciones y componentes
 - Paso de datos a las vistas
 - Recursos estáticos y Vite
 
-### 22. Base de datos: migraciones, seeders y factories
+### 24. Base de datos: migraciones, seeders y factories
 - Configuración de la base de datos
 - Migraciones y modificación de tablas
 - *Seeders* y *factories*
 - Query Builder
 
-### 23. Eloquent ORM
+### 25. Eloquent ORM
 - Modelos y convenciones
 - CRUD con Eloquent
 - Relaciones: uno a uno, uno a muchos, muchos a muchos
@@ -240,38 +300,38 @@
 - Borrado lógico (*soft deletes*)
 - Paginación
 
-### 24. Formularios y validación
+### 26. Formularios y validación
 - Peticiones (`Request`) y validación
 - *Form Requests*
 - Mensajes de error personalizados
 - Protección CSRF
 - Subida y almacenamiento de archivos
 
-### 25. Autenticación y autorización
+### 27. Autenticación y autorización
 - Sesiones y autenticación
 - *Starter kits* oficiales
 - *Gates* y *policies*
 - Roles y permisos
 
-### 26. Arquitectura interna de Laravel
+### 28. Arquitectura interna de Laravel
 - Contenedor de servicios (*service container*)
 - *Service providers*
 - *Facades* y contratos
 - Middleware
 - Comparación con nuestro MVC
 
-### 27. API REST con Laravel
+### 29. API REST con Laravel
 - *API Resources*
 - Autenticación de APIs (tokens)
 - Versionado, paginación y gestión de errores
 - Documentación de la API
 
-### 28. Pruebas
+### 30. Pruebas
 - Pruebas unitarias y de funcionalidad (*feature tests*)
 - Base de datos de pruebas
 - *Factories* en los tests
 
-### 29. Funcionalidades avanzadas
+### 31. Funcionalidades avanzadas
 - Eventos y *listeners*
 - Colas (*queues*) y *jobs*
 - Correo electrónico y notificaciones
@@ -279,7 +339,16 @@
 - Tareas programadas (*scheduler*)
 - Registros (*logs*) y manejo de excepciones
 
-### 30. Proyecto final y despliegue
+### 32. Proyecto final y despliegue
 - Desarrollo de un proyecto completo en grupo o individual
 - Buenas prácticas y revisión de código
 - Preparación y despliegue en un servidor
+
+## Material de consulta
+
+> Se irá publicando a lo largo del curso para tenerlo siempre a mano.
+
+- **Chuleta rápida:** sintaxis, superglobales y códigos de estado HTTP
+- **Atajos y extensiones** de Visual Studio Code
+- **Botiquín de emergencias:** los errores típicos del principiante (PHP, bases de datos y POO) y su solución
+- **Glosario** de términos para el futuro desarrollador
