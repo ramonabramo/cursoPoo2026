@@ -44,5 +44,5 @@ python3 pdf/generar_pdf.py clase-07-datos-y-operadores
 
 ## Commits y pull requests
 
-- Los mensajes de commit se redactan como si los escribiera el autor del curso: describen el cambio, sin mencionar instrucciones recibidas ni añadir líneas de coautoría o de sesión.
-- Los pull requests igual: título y descripción del cambio, sin pie de «Generated with Claude Code» ni enlaces a la sesión.
+- Los mensajes de commit se redactan como si los escribiera el autor del curso, **en gerundio** («Añadiendo la clase 18: PHP moderno», «Corrigiendo…», «Actualizando…»): describen el cambio, sin mencionar instrucciones recibidas ni añadir líneas de coautoría o de sesión.
+- Los pull requests igual: título en gerundio y descripción del cambio, sin pie de «Generated with Claude Code» ni enlaces a la sesión.

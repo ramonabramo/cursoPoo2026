@@ -433,7 +433,7 @@ Si cargáis `Alumno.php` antes que `Usuario.php`, PHP se para con *Class "Usuari
 ---
 
 **Clase anterior:** 👈 [Clase 16 · Clases y objetos](../clase-16-clases-y-objetos/README.md)
-**Siguiente bloque:** PHP moderno y POO avanzada (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 18 · PHP moderno y POO avanzada](../clase-18-php-moderno/README.md)
 
 ---
 
