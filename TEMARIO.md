@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 24 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 25 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -290,11 +290,14 @@
 - Excepciones HTTP para los errores 403, 404 y 405
 - Las siete rutas y acciones de un recurso; código 422 para datos no válidos
 
-### 19. Servicios del framework
-- Contenedor de inyección de dependencias
-- Middleware
-- Validación, sesiones y mensajes *flash*
-- Autenticación sencilla
+### Clase 25 · Bloque 19. Servicios del framework · [ver](clase-25-servicios-framework/README.md)
+- Contenedor de inyección de dependencias y *autowiring* con `Reflection`
+- Middleware: las capas entre la petición y el controlador
+- Middleware global y grupos de rutas protegidas
+- Mensajes *flash* que duran exactamente una petición
+- Validación con reglas (`obligatorio|min:3`) que vuelve atrás con los errores y los datos
+- Autenticación sencilla como servicio y modelo `Usuario`
+- Funciones de atajo para las vistas: `auth()`, `viejo()`, `error()`, `campoCsrf()`
 - Comparativa: qué parte de nuestro MVC equivale a cada pieza de Laravel
 
 ### 20. APIs REST con PHP puro

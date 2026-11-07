@@ -80,6 +80,7 @@ Al terminar el curso seréis capaces de:
 | **22** | [🏗️ Arquitectura MVC y front controller](clase-22-mvc-front-controller/README.md) | MVC, una sola puerta de entrada (`public/index.php`), `.htaccess`, controlador, vistas con layout y el modelo de la clase 20 |
 | **23** | [🧭 Router, peticiones y respuestas](clase-23-router-peticiones/README.md) | Clases `Peticion` y `Respuesta`, un router con parámetros (`/cursos/{id}`), errores 404, 405 y 500 |
 | **24** | [🧩 Controladores, vistas y modelos](clase-24-controladores-vistas-modelos/README.md) | `.env` propio, modelo base al estilo de Eloquent, vistas parciales, controlador base, excepciones HTTP y el CRUD completo |
+| **25** | [⚙️ Servicios del framework](clase-25-servicios-framework/README.md) | Contenedor de dependencias con *autowiring*, middleware, validación con reglas, mensajes *flash*, autenticación y la comparativa con Laravel |
 
 ### Lo que viene después
 
@@ -128,6 +129,7 @@ cursoPoo2026/
 ├── clase-22-mvc-front-controller/  ← Clases 22 a 26: nuestro propio MVC (carpeta proyecto/)
 ├── clase-23-router-peticiones/
 ├── clase-24-controladores-vistas-modelos/
+├── clase-25-servicios-framework/
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
