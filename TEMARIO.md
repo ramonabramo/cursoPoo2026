@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 19 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 20 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -177,10 +177,16 @@
 - `composer.json`, `composer.lock` y `vendor/`; `install`, `update` y `require`
 - ⭐ Scripts de Composer
 
-### 14. Bases de datos con objetos
-- Una clase de conexión a la base de datos
-- Patrón *Repository*: las consultas, en su propia clase
-- Rehacer el CRUD con clases
+### Clase 20 · Bloque 14. Bases de datos con objetos · [ver](clase-20-bases-datos-objetos/README.md)
+- El proyecto CRUD de la clase 15 rehecho con clases, Composer y PSR-4
+- Una clase `Conexion` que reutiliza una sola conexión (idea del *Singleton*)
+- Entidades: `Curso` y `Usuario`, con `desdeFila()`, `desdeFormulario()` y su propia validación
+- Patrón *Repository*: `CursoRepositorio` y `UsuarioRepositorio`, los únicos que hablan SQL
+- Inyección de dependencias: el repositorio recibe la conexión en el constructor
+- Un `guardar()` que decide entre `INSERT` y `UPDATE`
+- Excepciones propias para traducir los errores de MySQL
+- La sesión en una clase; `files` en la autocarga de Composer
+- ⭐ Un repositorio en memoria con la misma interfaz
 
 ### 15. Calidad y buenas prácticas
 - Código limpio: nombres, funciones cortas, DRY y KISS

@@ -70,6 +70,7 @@ Al terminar el curso seréis capaces de:
 | **17** | [🌳 Herencia, interfaces y polimorfismo](clase-17-herencia-interfaces/README.md) | `extends`, `parent::`, clases abstractas, `final`, interfaces, polimorfismo y traits |
 | **18** | [✨ PHP moderno y POO avanzada](clase-18-php-moderno/README.md) | `?tipo` y tipos unión, `?->`, enums, clases `readonly`, `__toString`, `clone` y excepciones propias |
 | **19** | [📦 Namespaces, Composer y autocarga](clase-19-namespaces-composer/README.md) | Namespaces y `use`, autocarga, PSR-4, Composer e instalación de librerías como Carbon |
+| **20** | [🗄️ Bases de datos con objetos](clase-20-bases-datos-objetos/README.md) | El CRUD rehecho con una clase de conexión, entidades, repositorios y excepciones propias |
 
 ### Lo que viene después
 
@@ -113,6 +114,7 @@ cursoPoo2026/
 ├── clase-17-herencia-interfaces/    ← Clase 17: herencia, interfaces y polimorfismo
 ├── clase-18-php-moderno/           ← Clase 18: PHP moderno y POO avanzada
 ├── clase-19-namespaces-composer/   ← Clase 19: namespaces, Composer y autocarga
+├── clase-20-bases-datos-objetos/   ← Clase 20: el CRUD con objetos (carpeta proyecto/)
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 

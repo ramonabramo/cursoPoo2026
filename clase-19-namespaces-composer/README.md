@@ -352,7 +352,7 @@ Las soluciones 01 a 03 están en un mismo proyecto, [`soluciones/academia/`](sol
 ---
 
 **Clase anterior:** 👈 [Clase 18 · PHP moderno y POO avanzada](../clase-18-php-moderno/README.md)
-**Siguiente bloque:** bases de datos con objetos (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 20 · Bases de datos con objetos](../clase-20-bases-datos-objetos/README.md)
 
 ---
 
