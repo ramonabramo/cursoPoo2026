@@ -6,38 +6,43 @@ function e(string $texto): string
     return htmlspecialchars($texto, ENT_QUOTES, "UTF-8");
 }
 
-date_default_timezone_set("Europe/Madrid");
-
-$archivo = __DIR__ . "/datos/visitas.json";
-
-// Leer las visitas guardadas (si el archivo existe)
-$visitas = [];
-if (file_exists($archivo)) {
-    $visitas = json_decode(file_get_contents($archivo), true) ?? [];
+// Lee las visitas guardadas; si el archivo no existe todavía, devuelve un array vacío
+function leerVisitas(string $archivo): array
+{
+    if (!file_exists($archivo)) {
+        return [];
+    }
+    return json_decode(file_get_contents($archivo), true) ?? [];
 }
 
+// Guarda todo el array como JSON
+function guardarVisitas(string $archivo, array $visitas): void
+{
+    $json = json_encode($visitas, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    file_put_contents($archivo, $json, LOCK_EX);
+}
+
+date_default_timezone_set("Europe/Madrid");
+$archivo = __DIR__ . "/datos/visitas.json";
 $error = "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nombre = trim($_POST["nombre"] ?? "");
-    $texto = trim($_POST["texto"] ?? "");
+$visitas = leerVisitas($archivo);
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$nombre = trim($_POST["nombre"] ?? "");
+$texto = trim($_POST["texto"] ?? "");
+$gracias = isset($_GET["ok"]);
 
+if ($esEnvio) {
     if ($nombre === "" || $texto === "") {
         $error = "Rellena los dos campos.";
     } else {
-        // Añadir la nueva visita al principio
+        // Añadir la nueva visita al principio y guardar
         array_unshift($visitas, [
             "nombre" => $nombre,
             "texto" => $texto,
             "fecha" => date("d/m/Y H:i"),
         ]);
-
-        // Guardar todo el array como JSON
-        file_put_contents(
-            $archivo,
-            json_encode($visitas, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
-            LOCK_EX
-        );
+        guardarVisitas($archivo, $visitas);
 
         // Post/Redirect/Get: redirigimos para que F5 no vuelva a enviar el formulario
         header("Location: 03-libro-visitas.php?ok=1");
@@ -54,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <h1>Libro de visitas</h1>
 
-    <?php if (isset($_GET["ok"])): ?>
+    <?php if ($gracias): ?>
         <p style="color: green">¡Gracias por firmar!</p>
     <?php endif; ?>
 

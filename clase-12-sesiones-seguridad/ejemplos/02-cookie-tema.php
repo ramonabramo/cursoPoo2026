@@ -1,10 +1,14 @@
 <?php
 declare(strict_types=1);
 
-// Si el usuario elige un tema, lo guardamos en una cookie durante 30 días
 $temas = ["claro", "oscuro"];
-if (in_array($_GET["tema"] ?? "", $temas, true)) {
-    setcookie("tema", $_GET["tema"], [
+
+$temaElegido = $_GET["tema"] ?? "";
+$tema = $_COOKIE["tema"] ?? "claro";
+
+// Si el usuario elige un tema válido, lo guardamos en una cookie durante 30 días
+if (in_array($temaElegido, $temas, true)) {
+    setcookie("tema", $temaElegido, [
         "expires" => time() + 60 * 60 * 24 * 30,   // dentro de 30 días
         "path" => "/",
         "httponly" => true,                        // JavaScript no puede leerla
@@ -14,8 +18,10 @@ if (in_array($_GET["tema"] ?? "", $temas, true)) {
     exit;
 }
 
-// Leer la cookie (si no existe, tema claro)
-$tema = $_COOKIE["tema"] ?? "claro";
+// Nunca nos fiamos de una cookie: el usuario puede cambiarla
+if (!in_array($tema, $temas, true)) {
+    $tema = "claro";
+}
 $fondo = $tema === "oscuro" ? "#1e1e1e" : "#ffffff";
 $texto = $tema === "oscuro" ? "#eeeeee" : "#222222";
 ?>

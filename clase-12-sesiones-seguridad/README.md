@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/sorpresa.webp" width="120" alt="El profesor, sorprendido"></p>
 
+> 📕 **Apuntes en PDF:** [clase-12-sesiones-seguridad.pdf](clase-12-sesiones-seguridad.pdf)
+
 Os voy a contar un secreto incómodo: **la web no tiene memoria**. Cada vez que hacéis clic en un enlace, para el servidor sois un perfecto desconocido, aunque hayáis entrado hace dos segundos. El protocolo HTTP funciona así: pregunta, respuesta y olvido.
 
 ¿Y entonces cómo sabe Amazon qué hay en vuestro carrito? ¿Cómo sabe el campus virtual que ya habéis iniciado sesión? Con **cookies** y **sesiones**. Hoy las vemos, montamos un **login** de verdad y cerramos la clase con lo imprescindible de **seguridad**.
@@ -160,12 +162,15 @@ Los usuarios están en [`usuarios.php`](ejemplos/login/usuarios.php), un archivo
 
 ```php
 <?php
+$error = "";
+
 session_start();
 $usuarios = require __DIR__ . "/usuarios.php";
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$usuario = trim($_POST["usuario"] ?? "");
+$clave = $_POST["clave"] ?? "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $usuario = trim($_POST["usuario"] ?? "");
-    $clave = $_POST["clave"] ?? "";
+if ($esEnvio) {
     $datos = $usuarios[$usuario] ?? null;
 
     if ($datos !== null && password_verify($clave, $datos["hash"])) {

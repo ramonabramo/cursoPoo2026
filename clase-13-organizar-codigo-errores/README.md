@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/error.webp" width="120" alt="El profesor ante un error"></p>
 
+> 📕 **Apuntes en PDF:** [clase-13-organizar-codigo-errores.pdf](clase-13-organizar-codigo-errores.pdf)
+
 Nadie escribe una web entera en un único archivo de diez mil líneas. Bueno… alguno lo ha intentado, y os aseguro que no acaba bien. 😅 Hoy aprendemos a **dividir el proyecto en piezas** (cabecera, pie, funciones) y a montarlas con `require`.
 
 La segunda parte va de algo que os acompañará toda la vida: **los errores**. Vamos a aprender a leerlos sin miedo, a buscar fallos con método y a controlar los problemas con **excepciones**, para que vuestra web no le enseñe al visitante una pantalla llena de mensajes en rojo.

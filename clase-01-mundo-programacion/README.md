@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/hola.webp" width="120" alt="Saludo del profesor"></p>
 
+> 📕 **Apuntes en PDF:** [clase-01-mundo-programacion.pdf](clase-01-mundo-programacion.pdf)
+
 Buenas, soy **Ramón Abramo**, profesor con más de 25 años de experiencia docente, y hoy empezamos este viaje juntos. 👋
 
 Esta primera clase es **solo teoría**. No vamos a instalar nada ni a escribir ni una línea de código. Mi objetivo es que, al terminar, sepáis situaros: qué tipos de programación existen, qué hace cada tecnología y qué camino vamos a recorrer durante el curso. Cuando lleguemos a PHP, a MySQL o a Laravel, ya sabréis dónde encaja cada pieza.
