@@ -94,7 +94,7 @@ cursoPoo2026/
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
-Cada carpeta tiene su propio `README.md` con la explicación de la clase.
+Cada carpeta tiene su propio `README.md` con la explicación de la clase y los mismos apuntes en **PDF** (📕), listos para descargar, imprimir o leer en la tableta.
 
 ---
 

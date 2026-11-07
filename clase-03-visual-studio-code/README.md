@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/genial.webp" width="120" alt="El profesor da el visto bueno"></p>
 
+> 📕 **Apuntes en PDF:** [clase-03-visual-studio-code.pdf](clase-03-visual-studio-code.pdf)
+
 Ya tenemos el servidor funcionando. Ahora nos falta el sitio donde vamos a escribir el código: el **editor**. 🧑‍💻
 
 En el curso usaremos **Visual Studio Code** (VS Code para los amigos). Es gratuito, funciona en Windows, Mac y Linux, y es el editor más utilizado del mundo para desarrollo web. Por sí solo ya es muy bueno, pero su verdadera fuerza está en las **extensiones**: pequeños complementos que le añaden funciones. Hoy os enseño cuáles vamos a instalar y para qué sirve cada una.
