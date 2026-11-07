@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 25 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 26 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -300,13 +300,15 @@
 - Funciones de atajo para las vistas: `auth()`, `viejo()`, `error()`, `campoCsrf()`
 - Comparativa: qué parte de nuestro MVC equivale a cada pieza de Laravel
 
-### 20. APIs REST con PHP puro
-- JSON, códigos de estado HTTP y verbos REST
-- Cabeceras HTTP con `header()` y `http_response_code()`
-- Recibir datos en JSON (`php://input`)
-- API de ejemplo con nuestro MVC
-- Consumir APIs externas con cURL
-- Probar la API con las herramientas del navegador, Postman o `curl`
+### Clase 26 · Bloque 20. APIs REST con PHP puro · [ver](clase-26-api-rest/README.md)
+- Qué es una API REST: recursos, verbos HTTP y códigos de estado
+- Responder en JSON con `Respuesta::json()` y la interfaz `JsonSerializable`
+- Recibir datos en JSON desde `php://input`
+- Rutas `PUT` y `DELETE` en el router y API de ejemplo con nuestro MVC
+- Proteger la API con un token `Bearer` (y por qué no necesita CSRF)
+- Errores de la API en JSON: 401, 404, 405, 409, 422 y 500
+- Probar la API con el navegador, Thunder Client, Postman o `curl`
+- Consumir APIs (propias y externas) con cURL
 
 ## Parte 5: Laravel 13
 

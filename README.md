@@ -81,6 +81,7 @@ Al terminar el curso seréis capaces de:
 | **23** | [🧭 Router, peticiones y respuestas](clase-23-router-peticiones/README.md) | Clases `Peticion` y `Respuesta`, un router con parámetros (`/cursos/{id}`), errores 404, 405 y 500 |
 | **24** | [🧩 Controladores, vistas y modelos](clase-24-controladores-vistas-modelos/README.md) | `.env` propio, modelo base al estilo de Eloquent, vistas parciales, controlador base, excepciones HTTP y el CRUD completo |
 | **25** | [⚙️ Servicios del framework](clase-25-servicios-framework/README.md) | Contenedor de dependencias con *autowiring*, middleware, validación con reglas, mensajes *flash*, autenticación y la comparativa con Laravel |
+| **26** | [🔌 APIs REST con PHP puro](clase-26-api-rest/README.md) | API REST de cursos en JSON, verbos y códigos de estado, token `Bearer`, errores en JSON y cliente cURL |
 
 ### Lo que viene después
 
@@ -89,9 +90,6 @@ A partir de aquí iremos añadiendo clases. Este es el recorrido previsto (en el
 | Parte | Contenido |
 |---|---|
 | 🐬 **SQL con MySQL** (en paralelo) | Diseño de tablas, consultas, funciones, agrupaciones y JOINs; como ampliación, subconsultas, transacciones e índices |
-| 🗄️ **Bases de datos con PHP** | PDO, consultas preparadas, transacciones y un proyecto CRUD completo |
-| 🧱 **Programación orientada a objetos** | Clases y objetos, herencia, interfaces, traits, enums, namespaces, Composer y buenas prácticas |
-| 🏗️ **Nuestro propio MVC** | Front controller, router, controladores, vistas, modelos y API REST |
 | 🚀 **Laravel** | Rutas, Blade, migraciones, Eloquent, validación, autenticación, API, pruebas y despliegue |
 
 Consultad el **[temario detallado](TEMARIO.md)** para ver el contenido de cada bloque.
@@ -130,6 +128,7 @@ cursoPoo2026/
 ├── clase-23-router-peticiones/
 ├── clase-24-controladores-vistas-modelos/
 ├── clase-25-servicios-framework/
+├── clase-26-api-rest/
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
