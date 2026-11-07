@@ -60,6 +60,7 @@ Al terminar el curso seréis capaces de:
 | Clase | Tema | Contenido |
 |---|---|---|
 | **14** | [🐬 Bases de datos con PDO](clase-14-bases-datos-pdo/README.md) | Conexión con PDO, consultas preparadas, inyección SQL, `INSERT`, `UPDATE`, `DELETE` y transacciones |
+| **15** | [🛠️ Proyecto CRUD paso a paso](clase-15-proyecto-crud/README.md) | Catálogo de cursos completo: listado con buscador y paginación, alta, edición, borrado seguro y login |
 
 ### Lo que viene después
 
@@ -98,6 +99,7 @@ cursoPoo2026/
 ├── ...
 ├── clase-13-organizar-codigo-errores/
 ├── clase-14-bases-datos-pdo/        ← Clase 14: bases de datos con PDO
+├── clase-15-proyecto-crud/          ← Clase 15: proyecto CRUD (carpeta proyecto/)
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
