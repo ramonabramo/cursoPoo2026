@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 22 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 23 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -270,10 +270,15 @@
 - Vistas sin lógica y un *layout* común con `extract()` y `ob_start()`
 - El modelo de la clase 20, reutilizado sin cambios
 
-### 17. Router, peticiones y respuestas
-- Clases `Request` y `Response`
-- Router: rutas, métodos HTTP y parámetros dinámicos
-- Gestión de errores 404 y 500
+### Clase 23 · Bloque 17. Router, peticiones y respuestas · [ver](clase-23-router-peticiones/README.md)
+- Del `if/elseif` a una lista de rutas en `config/rutas.php`
+- La clase `Peticion`: método, ruta, `$_GET` y `$_POST` en un objeto
+- La clase `Respuesta`: contenido, código de estado y cabeceras; un único `enviar()`
+- El router por dentro: `get()`, `post()` y `despachar()`
+- Parámetros dinámicos (`/cursos/{id}`) con grupos con nombre
+- Rutas atendidas por funciones anónimas
+- Errores 404 y 405 y página 500 con el manejador global de errores
+- El modo depuración y por qué se desactiva en producción
 
 ### 18. Controladores, vistas y modelos
 - Controlador base
