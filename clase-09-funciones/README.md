@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/genial.webp" width="120" alt="El profesor, entusiasmado"></p>
 
+> 📕 **Apuntes en PDF:** [clase-09-funciones.pdf](clase-09-funciones.pdf)
+
 Si alguna vez os pilláis copiando y pegando el mismo trozo de código en tres sitios, parad. Ahí falta una **función**.
 
 Ya escribisteis alguna en la clase 5. Hoy las vemos con calma: la diferencia entre mostrar y devolver, los parámetros, los tipos y por qué las variables de dentro de una función no se ven desde fuera. Con esto vais a escribir código más corto, más ordenado y mucho más fácil de arreglar.

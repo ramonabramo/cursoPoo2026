@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/curioso.webp" width="120" alt="El profesor, curioso"></p>
 
+> 📕 **Apuntes en PDF:** [clase-10-arrays-y-textos.pdf](clase-10-arrays-y-textos.pdf)
+
 Si una variable es una caja donde cabe un solo dato, un **array** es un **archivador con cajones**: cada cajón tiene su número o su etiqueta, y en cada uno guardáis algo. Sin arrays no habría listas de productos, ni carritos de la compra, ni resultados de una base de datos. Son el pan de cada día en PHP.
 
 En la segunda parte de la clase trabajaremos con **textos**: limpiarlos, buscar dentro, cortarlos y comprobar si un email es válido. Y cerraremos con las **fechas**, que también tienen su miga.

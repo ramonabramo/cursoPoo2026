@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/pensando.webp" width="120" alt="El profesor piensa"></p>
 
+> 📕 **Apuntes en PDF:** [clase-08-decidir-y-repetir.pdf](clase-08-decidir-y-repetir.pdf)
+
 `if`, `match`, `for`, `while`, `foreach`… Ya los conocéis. En la clase 5 visteis **cómo se escriben**. Hoy vamos a por lo difícil de verdad: **cómo se piensa** un programa que decide y repite.
 
 Os lo digo por experiencia: casi nadie se atasca por no recordar la sintaxis de un `for`. La gente se atasca delante de la pantalla en blanco, sin saber por dónde empezar. Así que hoy escribimos menos teoría y resolvemos más problemas.

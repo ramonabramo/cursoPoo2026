@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/atencion.webp" width="120" alt="El profesor avisa"></p>
 
+> 📕 **Apuntes en PDF:** [clase-11-formularios-archivos.pdf](clase-11-formularios-archivos.pdf)
+
 Hasta ahora éramos nosotros quienes escribíamos los datos en el código. Pero una web de verdad es **interactiva**: los usuarios escriben su nombre, eligen opciones, suben fotos y pulsan botones. Hoy aprendemos a **recibir** todo eso, a **comprobarlo** y a **guardarlo** en ficheros.
 
 Ya hicisteis un formulario en la clase 6. Hoy lo convertimos en uno «profesional»: que muestre los errores junto a cada campo, que no borre lo que el usuario ya había escrito y que no se deje colar código malicioso.
