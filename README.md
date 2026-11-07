@@ -62,6 +62,12 @@ Al terminar el curso seréis capaces de:
 | **14** | [🐬 Bases de datos con PDO](clase-14-bases-datos-pdo/README.md) | Conexión con PDO, consultas preparadas, inyección SQL, `INSERT`, `UPDATE`, `DELETE` y transacciones |
 | **15** | [🛠️ Proyecto CRUD paso a paso](clase-15-proyecto-crud/README.md) | Catálogo de cursos completo: listado con buscador y paginación, alta, edición, borrado seguro y login |
 
+### Programación orientada a objetos
+
+| Clase | Tema | Contenido |
+|---|---|---|
+| **16** | [🧱 Clases y objetos](clase-16-clases-y-objetos/README.md) | Clase y objeto, métodos y `$this`, constructor, encapsulación, `readonly`, `static` y una clase por archivo |
+
 ### Lo que viene después
 
 A partir de aquí iremos añadiendo clases. Este es el recorrido previsto (en el temario veréis marcado con ⭐ lo que es «para saber más»):
@@ -100,6 +106,7 @@ cursoPoo2026/
 ├── clase-13-organizar-codigo-errores/
 ├── clase-14-bases-datos-pdo/        ← Clase 14: bases de datos con PDO
 ├── clase-15-proyecto-crud/          ← Clase 15: proyecto CRUD (carpeta proyecto/)
+├── clase-16-clases-y-objetos/       ← Clase 16: primera clase de POO
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
