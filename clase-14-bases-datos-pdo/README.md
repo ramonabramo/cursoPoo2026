@@ -420,7 +420,7 @@ Fijaos en el truco del `WHERE ... AND plazas > 0`: si no quedan plazas, el `UPDA
 ---
 
 **Clase anterior:** 👈 [Clase 13 · Organizar el código y controlar los errores](../clase-13-organizar-codigo-errores/README.md)
-**Siguiente bloque:** proyecto CRUD paso a paso (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 15 · Proyecto CRUD paso a paso](../clase-15-proyecto-crud/README.md)
 
 ---
 
