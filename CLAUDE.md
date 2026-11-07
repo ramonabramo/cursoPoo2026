@@ -26,6 +26,7 @@ Cada clase vive en `clase-NN-nombre/` con:
 - `README.md`: apuntes de la clase. Termina con `### Fuentes y Documentación Oficial`.
 - `ejemplos/`: los ejemplos de la explicación, numerados.
 - `soluciones/`: una solución de cada ejercicio.
+- En las clases de proyecto (como la 15), una carpeta `proyecto/` con la aplicación completa en lugar de `ejemplos/`.
 - `clase-NN-nombre.pdf`: los apuntes en PDF, generados a partir del `README.md`.
 
 ## Generar los PDF
