@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 16 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 17 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -145,12 +145,16 @@
 - Una clase por archivo, cargada con `require_once`; del array de la base de datos al objeto con `desdeArray()`
 - Errores típicos con objetos
 
-### 11. Herencia, interfaces y polimorfismo
-- Herencia con `extends` y `parent::`
-- Clases y métodos abstractos, `final`
-- Interfaces: contratos con `implements`
-- Polimorfismo explicado con ejemplos cotidianos
-- Traits: reutilizar código sin herencia
+### Clase 17 · Bloque 11. Herencia, interfaces y polimorfismo · [ver](clase-17-herencia-interfaces/README.md)
+- El problema del código repetido entre clases
+- Herencia con `extends` y la prueba del «es un»
+- `parent::__construct()`, sobrescribir métodos y `parent::metodo()`; ahora sí, `protected`
+- Clases y métodos abstractos; `final`
+- Interfaces: el contrato (`implements`) y las interfaces como tipo de un parámetro
+- Polimorfismo: la misma orden, distintas respuestas; `instanceof`
+- Traits: compartir código entre clases que no son familia
+- ¿Herencia, interfaz o trait?
+- Clases en archivos: el padre se carga primero
 
 ### 12. PHP moderno y POO avanzada
 - Enumeraciones (`enum`)

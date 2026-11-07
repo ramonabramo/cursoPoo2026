@@ -67,6 +67,7 @@ Al terminar el curso seréis capaces de:
 | Clase | Tema | Contenido |
 |---|---|---|
 | **16** | [🧱 Clases y objetos](clase-16-clases-y-objetos/README.md) | Clase y objeto, métodos y `$this`, constructor, encapsulación, `readonly`, `static` y una clase por archivo |
+| **17** | [🌳 Herencia, interfaces y polimorfismo](clase-17-herencia-interfaces/README.md) | `extends`, `parent::`, clases abstractas, `final`, interfaces, polimorfismo y traits |
 
 ### Lo que viene después
 
@@ -107,6 +108,7 @@ cursoPoo2026/
 ├── clase-14-bases-datos-pdo/        ← Clase 14: bases de datos con PDO
 ├── clase-15-proyecto-crud/          ← Clase 15: proyecto CRUD (carpeta proyecto/)
 ├── clase-16-clases-y-objetos/       ← Clase 16: primera clase de POO
+├── clase-17-herencia-interfaces/    ← Clase 17: herencia, interfaces y polimorfismo
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
