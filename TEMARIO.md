@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 18 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 19 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -166,12 +166,16 @@
 - Excepciones propias que heredan de las de PHP y traen sus datos
 - ⭐ Otros métodos mágicos, enlace estático tardío (`static::`) y tipos *intersection*
 
-### 13. Namespaces, Composer y autoloading
-- Namespaces y `use`
-- Adiós a los `require`: autoloading con PSR-4
-- Composer: `composer.json`, instalar dependencias, `composer.lock`
-- Uso de paquetes de terceros
-- ⭐ `spl_autoload_register` y scripts de Composer
+### Clase 19 · Bloque 13. Namespaces, Composer y autocarga · [ver](clase-19-namespaces-composer/README.md)
+- El problema: `require_once` por todas partes y nombres de clase que chocan
+- Namespaces: el «apellido» de las clases; `Clase::class`
+- `use` y alias con `as`; las clases de PHP (`DateTime`, `PDO`…) dentro de un namespace
+- La autocarga hecha a mano con `spl_autoload_register()`
+- PSR-4: namespace = carpetas, clase = archivo
+- Composer: `composer.json`, `composer dump-autoload` y `vendor/autoload.php`
+- Instalar librerías de terceros: Carbon para las fechas
+- `composer.json`, `composer.lock` y `vendor/`; `install`, `update` y `require`
+- ⭐ Scripts de Composer
 
 ### 14. Bases de datos con objetos
 - Una clase de conexión a la base de datos

@@ -360,7 +360,7 @@ try {
 ---
 
 **Clase anterior:** 👈 [Clase 17 · Herencia, interfaces y polimorfismo](../clase-17-herencia-interfaces/README.md)
-**Siguiente bloque:** namespaces, Composer y autocarga (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 19 · Namespaces, Composer y autocarga](../clase-19-namespaces-composer/README.md)
 
 ---
 
