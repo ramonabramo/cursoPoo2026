@@ -1,15 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// 1. Capturar un error que lanza PHP
-try {
-    echo intdiv(10, 0);                      // PHP lanza DivisionByZeroError
-    echo "Esta línea no se ejecuta";
-} catch (DivisionByZeroError $error) {
-    echo "No se puede dividir entre cero.<br>";
-}
-
-// 2. Lanzar nuestras propias excepciones con throw
+// Nuestras funciones pueden lanzar excepciones con throw
 function retirarDinero(float $saldo, float $cantidad): float
 {
     if ($cantidad <= 0) {
@@ -21,11 +13,21 @@ function retirarDinero(float $saldo, float $cantidad): float
     return $saldo - $cantidad;
 }
 
+$saldo = 100;
 $operaciones = [50, -10, 500];
 
+// 1. Capturar un error que lanza PHP
+try {
+    echo intdiv(10, 0);                      // PHP lanza DivisionByZeroError
+    echo "Esta línea no se ejecuta";
+} catch (DivisionByZeroError $error) {
+    echo "No se puede dividir entre cero.<br>";
+}
+
+// 2. Capturar las excepciones que lanza nuestra función
 foreach ($operaciones as $cantidad) {
     try {
-        $nuevoSaldo = retirarDinero(100, $cantidad);
+        $nuevoSaldo = retirarDinero($saldo, $cantidad);
         echo "Retirados {$cantidad} €. Saldo: {$nuevoSaldo} €<br>";
     } catch (InvalidArgumentException $e) {
         echo "Dato incorrecto: " . $e->getMessage() . "<br>";

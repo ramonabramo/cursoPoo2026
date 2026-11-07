@@ -43,15 +43,15 @@ PHP guarda lo que llega del navegador en unos arrays especiales, las **superglob
 
 ## <img src="../img/emojis/ok.webp" width="40" alt=""> 2. El patrón del formulario profesional
 
-Vamos a escribir un formulario de contacto que se procesa **en el mismo archivo**. Fijaos en el orden, porque lo usaréis siempre:
+Vamos a escribir un formulario de contacto que se procesa **en el mismo archivo**. Fijaos en que sigue el orden de programa que vimos en la clase 9, porque lo usaréis siempre:
 
-```text
- 1. ¿Me han enviado el formulario?   →  $_SERVER["REQUEST_METHOD"] === "POST"
- 2. Recoger y limpiar los datos      →  trim($_POST["nombre"] ?? "")
- 3. Validar                          →  cada error se guarda en un array $errores
- 4. ¿Sin errores?                    →  procesar (guardar, enviar…)
- 5. Mostrar el HTML                  →  errores + formulario con lo que ya escribió
-```
+| Parte | En un formulario |
+|---|---|
+| **Funciones** | `e()` para escapar y `validarContacto()`, que devuelve un array con los errores |
+| **Inicialización** | `$errores = [];` y `$enviado = false;` |
+| **Entradas** | ¿Me han enviado el formulario? (`$_SERVER["REQUEST_METHOD"]`) y los datos, limpios con `trim()` |
+| **Procesamiento** | Si es un envío: validar y, si no hay errores, procesar (guardar, enviar…) |
+| **Salidas** | El HTML: los errores y el formulario con lo que el usuario ya había escrito |
 
 Y en código:
 
@@ -59,35 +59,45 @@ Y en código:
 <?php
 declare(strict_types=1);
 
-$errores = [];
-$nombre = "";
-$email = "";
+function e(string $texto): string
+{
+    return htmlspecialchars($texto, ENT_QUOTES, "UTF-8");
+}
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {        // 1
-    $nombre = trim($_POST["nombre"] ?? "");          // 2
-    $email = trim($_POST["email"] ?? "");
-
-    if ($nombre === "") {                            // 3
+function validarContacto(string $nombre, string $email): array
+{
+    $errores = [];
+    if ($nombre === "") {
         $errores[] = "El nombre es obligatorio.";
     }
     if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
         $errores[] = "El email no tiene un formato válido.";
     }
+    return $errores;
+}
 
-    if (count($errores) === 0) {                     // 4
-        // todo correcto: guardar, enviar un correo...
-    }
+$errores = [];
+$enviado = false;
+
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$nombre = trim($_POST["nombre"] ?? "");
+$email = trim($_POST["email"] ?? "");
+
+if ($esEnvio) {
+    $errores = validarContacto($nombre, $email);
+    $enviado = count($errores) === 0;
 }
 ?>
+<!-- y aquí, el HTML -->
 ```
 
-En el HTML (paso 5) volvemos a poner en cada campo lo que el usuario escribió, para que no tenga que rellenarlo todo otra vez por un solo error:
+En el HTML volvemos a poner en cada campo lo que el usuario escribió, para que no tenga que rellenarlo todo otra vez por un solo error:
 
 ```php
 <input type="text" name="nombre" value="<?= e($nombre) ?>">
 ```
 
-¿Y qué es esa `e()`? Una funcioncita de ayuda que escribimos nosotros. La explico en el punto 4.
+¿Y qué hace exactamente esa `e()`? Lo explico en el punto 4.
 
 📄 Ejemplo completo: [`01-formulario-contacto.php`](ejemplos/01-formulario-contacto.php)
 

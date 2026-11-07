@@ -6,17 +6,10 @@ function e(string $texto): string
     return htmlspecialchars($texto, ENT_QUOTES, "UTF-8");
 }
 
-$ciudades = ["Santander", "Torrelavega", "Laredo", "Castro Urdiales"];
-$errores = [];
-$datos = ["nombre" => "", "email" => "", "edad" => "", "ciudad" => ""];
-$registrado = false;
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    foreach ($datos as $campo => $valor) {
-        $datos[$campo] = trim($_POST[$campo] ?? "");
-    }
-    $clave = $_POST["clave"] ?? "";
-    $clave2 = $_POST["clave2"] ?? "";
+// Devuelve los errores con el nombre del campo como clave
+function validarRegistro(array $datos, string $clave, string $clave2, array $ciudades): array
+{
+    $errores = [];
 
     if (mb_strlen($datos["nombre"]) < 2) {
         $errores["nombre"] = "Escribe tu nombre.";
@@ -24,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (filter_var($datos["email"], FILTER_VALIDATE_EMAIL) === false) {
         $errores["email"] = "El email no es válido.";
     }
-    $edad = filter_var($datos["edad"], FILTER_VALIDATE_INT, ["options" => ["min_range" => 16, "max_range" => 99]]);
-    if ($edad === false) {
+    $opcionesEdad = ["options" => ["min_range" => 16, "max_range" => 99]];
+    if (filter_var($datos["edad"], FILTER_VALIDATE_INT, $opcionesEdad) === false) {
         $errores["edad"] = "La edad debe ser un número entre 16 y 99.";
     }
     if (!in_array($datos["ciudad"], $ciudades, true)) {
@@ -37,6 +30,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $errores["clave"] = "Las contraseñas no coinciden.";
     }
 
+    return $errores;
+}
+
+$ciudades = ["Santander", "Torrelavega", "Laredo", "Castro Urdiales"];
+$campos = ["nombre", "email", "edad", "ciudad"];
+$errores = [];
+$registrado = false;
+
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$datos = [];
+foreach ($campos as $campo) {
+    $datos[$campo] = trim($_POST[$campo] ?? "");
+}
+$clave = $_POST["clave"] ?? "";
+$clave2 = $_POST["clave2"] ?? "";
+
+if ($esEnvio) {
+    $errores = validarRegistro($datos, $clave, $clave2, $ciudades);
     $registrado = count($errores) === 0;
 }
 ?>

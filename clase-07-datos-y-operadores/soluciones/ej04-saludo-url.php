@@ -3,12 +3,13 @@
 $nombre = $_GET["nombre"] ?? "invitado";
 $edad = (int) ($_GET["edad"] ?? 0);
 
-echo "Hola, " . htmlspecialchars($nombre) . "<br>";
-
 if ($edad === 0) {
-    echo "No sé tu edad.";
+    $mensajeEdad = "No sé tu edad.";
 } elseif ($edad >= 18) {
-    echo "Eres mayor de edad.";
+    $mensajeEdad = "Eres mayor de edad.";
 } else {
-    echo "Te faltan " . (18 - $edad) . " años para ser mayor de edad.";
+    $mensajeEdad = "Te faltan " . (18 - $edad) . " años para ser mayor de edad.";
 }
+
+echo "Hola, " . htmlspecialchars($nombre) . "<br>";
+echo $mensajeEdad;
