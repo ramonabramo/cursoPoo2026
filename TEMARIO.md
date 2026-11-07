@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 17 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 18 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -156,14 +156,15 @@
 - ¿Herencia, interfaz o trait?
 - Clases en archivos: el padre se carga primero
 
-### 12. PHP moderno y POO avanzada
-- Enumeraciones (`enum`)
-- Clases `readonly`
-- Operador *nullsafe* (`?->`)
-- Tipos *nullable* (`?string`) y *union* (`int|float`)
-- Excepciones personalizadas
-- `__toString()` y comparación de objetos
-- ⭐ Otros métodos mágicos, clonación, enlace estático tardío (`static::`) y tipos *intersection*
+### Clase 18 · Bloque 12. PHP moderno y POO avanzada · [ver](clase-18-php-moderno/README.md)
+- Tipos *nullable* (`?string`) y tipos unión (`int|float`)
+- Operador *nullsafe* (`?->`) junto con `??`
+- Enumeraciones (`enum`): casos, `name`, `cases()` y `match`
+- Enums respaldados: `value`, `from()`, `tryFrom()` y métodos dentro del enum
+- Clases `readonly`: objetos inmutables (ejemplo con dinero en céntimos)
+- `__toString()`, comparación de objetos (`==` frente a `===`) y `clone`
+- Excepciones propias que heredan de las de PHP y traen sus datos
+- ⭐ Otros métodos mágicos, enlace estático tardío (`static::`) y tipos *intersection*
 
 ### 13. Namespaces, Composer y autoloading
 - Namespaces y `use`
