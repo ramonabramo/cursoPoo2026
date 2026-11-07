@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 21 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 22 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -260,10 +260,15 @@
 
 > Objetivo: construir paso a paso un pequeño *framework* MVC para entender cómo funcionan Laravel y cualquier otro framework por dentro.
 
-### 16. Arquitectura MVC y *front controller*
-- Qué es MVC y por qué se usa: la analogía del restaurante (sala, cocina y despensa)
-- Estructura de carpetas del proyecto
-- Punto de entrada único (`public/index.php`) y reescritura de URLs (`.htaccess`)
+### Clase 22 · Bloque 16. Arquitectura MVC y front controller · [ver](clase-22-mvc-front-controller/README.md)
+- Qué es MVC: modelo, vista y controlador (la analogía del restaurante)
+- El problema de los archivos sueltos y el *front controller*
+- Estructura de carpetas: solo `public/` es visible desde el navegador
+- Reescritura de URLs con `.htaccess` y rutas bonitas (`/cursos/5`)
+- El recorrido completo de una petición
+- El primer controlador
+- Vistas sin lógica y un *layout* común con `extract()` y `ob_start()`
+- El modelo de la clase 20, reutilizado sin cambios
 
 ### 17. Router, peticiones y respuestas
 - Clases `Request` y `Response`

@@ -73,6 +73,12 @@ Al terminar el curso seréis capaces de:
 | **20** | [🗄️ Bases de datos con objetos](clase-20-bases-datos-objetos/README.md) | El CRUD rehecho con una clase de conexión, entidades, repositorios y excepciones propias |
 | **21** | [🧹 Calidad y buenas prácticas](clase-21-calidad-buenas-practicas/README.md) | Nombres, funciones cortas, PSR-12, errores globales, inyección de dependencias, SOLID y herramientas |
 
+### Nuestro propio MVC
+
+| Clase | Tema | Contenido |
+|---|---|---|
+| **22** | [🏗️ Arquitectura MVC y front controller](clase-22-mvc-front-controller/README.md) | MVC, una sola puerta de entrada (`public/index.php`), `.htaccess`, controlador, vistas con layout y el modelo de la clase 20 |
+
 ### Lo que viene después
 
 A partir de aquí iremos añadiendo clases. Este es el recorrido previsto (en el temario veréis marcado con ⭐ lo que es «para saber más»):
@@ -117,6 +123,7 @@ cursoPoo2026/
 ├── clase-19-namespaces-composer/   ← Clase 19: namespaces, Composer y autocarga
 ├── clase-20-bases-datos-objetos/   ← Clase 20: el CRUD con objetos (carpeta proyecto/)
 ├── clase-21-calidad-buenas-practicas/ ← Clase 21: calidad y buenas prácticas
+├── clase-22-mvc-front-controller/  ← Clases 22 a 26: nuestro propio MVC (carpeta proyecto/)
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
