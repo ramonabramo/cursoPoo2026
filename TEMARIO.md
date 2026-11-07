@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 14 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 15 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -120,13 +120,17 @@
 - Transacciones: todo o nada (`beginTransaction`, `commit`, `rollBack`)
 - Botiquín de errores típicos de base de datos
 
-### 09. Proyecto CRUD paso a paso
-- Estructura de carpetas del proyecto
-- Listado con buscador y paginación
-- Alta con validación
+### Clase 15 · Bloque 09. Proyecto CRUD paso a paso · [ver](clase-15-proyecto-crud/README.md)
+- Qué es un CRUD y qué vamos a construir: el catálogo de cursos de la academia
+- Estructura de carpetas: configuración, piezas comunes y páginas cortas
+- Caja de herramientas: `redirigir()` (tipo `never`), mensajes *flash*, CSRF y guardián de login
+- Todas las consultas de una tabla en su propio archivo
+- Listado con buscador y paginación (`LIMIT`, `OFFSET` y `bindValue`)
+- Alta con validación y un formulario compartido con la edición
 - Edición con formulario precargado
-- Borrado seguro: siempre por POST y con confirmación (nunca por GET)
+- Borrado seguro: solo POST, confirmación, token CSRF y clave foránea
 - Login contra la base de datos con contraseñas cifradas
+- Lista de pruebas para dar el proyecto por terminado
 
 ## Parte 3: Programación orientada a objetos
 
