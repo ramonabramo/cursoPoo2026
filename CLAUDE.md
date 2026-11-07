@@ -8,6 +8,7 @@ Curso de PHP y POO de Ramón Abramo (Alpe Formación, Santander) para alumnado c
 - **camelCase** para variables, funciones, métodos, propiedades y claves que inventemos (`$precioTotal`, `calcularMedia()`).
   - Excepciones: las **clases**, interfaces, traits y enums empiezan por mayúscula (`PascalCase`: `Producto`, `CarritoCompra`); las **constantes** van en mayúsculas (`IVA`, `MAX_INTENTOS`), que es la convención de PHP.
 - `declare(strict_types=1);` como primera instrucción desde la clase 9.
+- En **SQL**, tablas y columnas en minúsculas con guion bajo (`curso_id`, `fecha_alta`), que es la convención de MySQL y de Laravel; en PHP se siguen nombrando en camelCase (`$cursoId`). Siempre consultas preparadas con marcadores con nombre (`:id`).
 - **Estructura de un programa**, siempre que el ejemplo lo permita (en los ejemplos muy sencillos no hace falta):
   1. Clases (si están en el mismo fichero), o su carga con `require_once` al principio. Más adelante, en el bloque de Composer, se explica la autocarga.
   2. Funciones.

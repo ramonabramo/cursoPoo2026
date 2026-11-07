@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 13 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 14 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -109,12 +109,16 @@
 
 > Antes del bloque 08 conviene haber visto los bloques S01 a S06 del itinerario de SQL.
 
-### 08. Bases de datos con PDO
-- Repaso: tablas, claves primarias y las cuatro consultas básicas (`SELECT`, `INSERT`, `UPDATE`, `DELETE`)
-- Conexión con PDO: DSN, `utf8mb4` y modo de errores con excepciones
-- Consultas preparadas con `prepare()` y `execute()`: adiós a la inyección SQL
-- Recorrer resultados con `fetch()` y `fetchAll()`
+### Clase 14 · Bloque 08. Bases de datos con PDO · [ver](clase-14-bases-datos-pdo/README.md)
+- La despensa: tablas, filas, columnas, clave primaria y clave foránea; `utf8mb4`
+- La base de datos de prácticas `academia_alpe` (cursos y alumnos)
+- Repaso de SQL: `SELECT`, `INSERT`, `UPDATE` y `DELETE` (siempre con `WHERE`) e `INNER JOIN`
+- Conexión con PDO: DSN, `ERRMODE_EXCEPTION`, `FETCH_ASSOC` y sin emulación de consultas preparadas
+- Leer datos: `query()`, `fetch()`, `fetchAll()` y `fetchColumn()`
+- Consultas preparadas con `prepare()` y `execute()` y marcadores con nombre: adiós a la inyección SQL
+- Escribir datos: `lastInsertId()`, `rowCount()`, valores duplicados y borrar siempre por POST
 - Transacciones: todo o nada (`beginTransaction`, `commit`, `rollBack`)
+- Botiquín de errores típicos de base de datos
 
 ### 09. Proyecto CRUD paso a paso
 - Estructura de carpetas del proyecto

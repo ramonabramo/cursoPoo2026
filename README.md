@@ -55,6 +55,12 @@ Al terminar el curso seréis capaces de:
 | **12** | [🔐 Sesiones, login y seguridad](clase-12-sesiones-seguridad/README.md) | Cookies y sesiones, contraseñas cifradas, login completo, XSS, inyección SQL y CSRF |
 | **13** | [🧩 Organizar el código y controlar los errores](clase-13-organizar-codigo-errores/README.md) | `require_once`, cabecera y pie comunes, leer errores, depurar y excepciones |
 
+### Bases de datos con PHP
+
+| Clase | Tema | Contenido |
+|---|---|---|
+| **14** | [🐬 Bases de datos con PDO](clase-14-bases-datos-pdo/README.md) | Conexión con PDO, consultas preparadas, inyección SQL, `INSERT`, `UPDATE`, `DELETE` y transacciones |
+
 ### Lo que viene después
 
 A partir de aquí iremos añadiendo clases. Este es el recorrido previsto (en el temario veréis marcado con ⭐ lo que es «para saber más»):
@@ -91,6 +97,7 @@ cursoPoo2026/
 ├── clase-08-decidir-y-repetir/
 ├── ...
 ├── clase-13-organizar-codigo-errores/
+├── clase-14-bases-datos-pdo/        ← Clase 14: bases de datos con PDO
 └── ...                              ← Se irán añadiendo carpetas con cada clase
 ```
 
