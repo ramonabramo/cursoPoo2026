@@ -429,7 +429,7 @@ Ese `desdeArray()` es un **método estático que fabrica objetos**: recibe una f
 ---
 
 **Clase anterior:** 👈 [Clase 15 · Proyecto CRUD paso a paso](../clase-15-proyecto-crud/README.md)
-**Siguiente bloque:** herencia, interfaces y polimorfismo (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 17 · Herencia, interfaces y polimorfismo](../clase-17-herencia-interfaces/README.md)
 
 ---
 
