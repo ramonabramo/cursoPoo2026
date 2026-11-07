@@ -1,26 +1,17 @@
 <?php
 declare(strict_types=1);
 
-// Función de ayuda para mostrar texto del usuario de forma segura
+// Muestra texto del usuario de forma segura
 function e(string $texto): string
 {
     return htmlspecialchars($texto, ENT_QUOTES, "UTF-8");
 }
 
-$errores = [];
-$nombre = "";
-$email = "";
-$mensaje = "";
-$enviado = false;
+// Devuelve un array con los errores encontrados (vacío si todo está bien)
+function validarContacto(string $nombre, string $email, string $mensaje): array
+{
+    $errores = [];
 
-// 1. ¿Nos han enviado el formulario?
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // 2. Recoger y limpiar
-    $nombre = trim($_POST["nombre"] ?? "");
-    $email = trim($_POST["email"] ?? "");
-    $mensaje = trim($_POST["mensaje"] ?? "");
-
-    // 3. Validar
     if ($nombre === "") {
         $errores[] = "El nombre es obligatorio.";
     }
@@ -31,10 +22,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $errores[] = "El mensaje debe tener al menos 10 caracteres.";
     }
 
-    // 4. Si no hay errores, procesamos
-    if (count($errores) === 0) {
-        $enviado = true;
-    }
+    return $errores;
+}
+
+$errores = [];
+$enviado = false;
+
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$nombre = trim($_POST["nombre"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$mensaje = trim($_POST["mensaje"] ?? "");
+
+if ($esEnvio) {
+    $errores = validarContacto($nombre, $email, $mensaje);
+    $enviado = count($errores) === 0;
 }
 ?>
 <!DOCTYPE html>

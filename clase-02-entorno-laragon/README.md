@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/explica.webp" width="120" alt="El profesor explica"></p>
 
+> 📕 **Apuntes en PDF:** [clase-02-entorno-laragon.pdf](clase-02-entorno-laragon.pdf)
+
 En la clase anterior os conté que PHP se ejecuta en un **servidor**. Pues bien, hoy vamos a montar ese servidor… en vuestro propio ordenador. 💻
 
 Para eso usaremos **Laragon**, un programa para Windows que trae en un solo paquete todo lo que necesitamos: el servidor web **Apache**, **PHP**, la base de datos **MySQL**, el gestor de bases de datos **HeidiSQL** y **Composer**. Lo instalamos, pulsamos un botón y tenemos un servidor completo funcionando en local.

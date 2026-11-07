@@ -1,24 +1,23 @@
 <?php
 declare(strict_types=1);
 
-session_start();
-
 const MAX_INTENTOS = 3;
 const BLOQUEO_SEGUNDOS = 60;
 
-// Usuario de prueba: luis / secreto123
-$hashGuardado = password_hash("secreto123", PASSWORD_DEFAULT);   // en la vida real vendría de la BD
+// Usuario de prueba: luis / secreto123 (en la vida real, el hash vendría de la base de datos)
+$hashGuardado = password_hash("secreto123", PASSWORD_DEFAULT);
+$mensaje = "";
 
+session_start();
 $_SESSION["intentos"] ??= 0;
 $_SESSION["bloqueadoHasta"] ??= 0;
-$mensaje = "";
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$usuario = $_POST["usuario"] ?? "";
+$clave = $_POST["clave"] ?? "";
 
 $bloqueado = time() < $_SESSION["bloqueadoHasta"];
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && !$bloqueado) {
-    $usuario = $_POST["usuario"] ?? "";
-    $clave = $_POST["clave"] ?? "";
-
+if ($esEnvio && !$bloqueado) {
     if ($usuario === "luis" && password_verify($clave, $hashGuardado)) {
         $_SESSION["intentos"] = 0;
         $mensaje = "¡Bienvenido, Luis!";

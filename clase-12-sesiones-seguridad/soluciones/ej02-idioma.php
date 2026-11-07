@@ -7,8 +7,11 @@ $textos = [
     "fr" => ["titulo" => "Bienvenue !",   "texto" => "Voici le cours de PHP."],
 ];
 
-if (isset($textos[$_GET["idioma"] ?? ""])) {
-    setcookie("idioma", $_GET["idioma"], [
+$idiomaElegido = $_GET["idioma"] ?? "";
+$idioma = $_COOKIE["idioma"] ?? "es";
+
+if (isset($textos[$idiomaElegido])) {
+    setcookie("idioma", $idiomaElegido, [
         "expires" => time() + 60 * 60 * 24 * 365,
         "path" => "/",
         "httponly" => true,
@@ -18,7 +21,6 @@ if (isset($textos[$_GET["idioma"] ?? ""])) {
     exit;
 }
 
-$idioma = $_COOKIE["idioma"] ?? "es";
 if (!isset($textos[$idioma])) {
     $idioma = "es";   // nunca nos fiamos de una cookie: el usuario puede cambiarla
 }

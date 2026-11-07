@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/explica.webp" width="120" alt="El profesor explica"></p>
 
+> 📕 **Apuntes en PDF:** [clase-07-datos-y-operadores.pdf](clase-07-datos-y-operadores.pdf)
+
 En las clases 4 a 6 fuimos deprisa a propósito: quería que vierais PHP funcionando cuanto antes. Ahora toca lo contrario. **Vamos despacio**, volvemos a los datos y a los operadores, y nos paramos en los detalles que más errores provocan al empezar.
 
 Os aviso: hoy no hay nada «nuevo y espectacular». Hay algo mejor. Vais a entender **por qué** PHP se comporta como se comporta, y eso os ahorrará muchas horas de buscar fallos.

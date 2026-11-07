@@ -3,13 +3,16 @@ declare(strict_types=1);
 
 require_once __DIR__ . "/funciones.php";
 
-$a = $_POST["a"] ?? "";
-$b = $_POST["b"] ?? "";
-$operacion = $_POST["operacion"] ?? "+";
+$operaciones = ["+", "-", "*", "/"];
 $resultado = "";
 $error = "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$a = $_POST["a"] ?? "";
+$b = $_POST["b"] ?? "";
+$operacion = $_POST["operacion"] ?? "+";
+
+if ($esEnvio) {
     if (!is_numeric($a) || !is_numeric($b)) {
         $error = "Escribe dos números.";
     } else {
@@ -29,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <form method="post">
     <input name="a" value="<?= e($a) ?>" size="6">
     <select name="operacion">
-        <?php foreach (["+", "-", "*", "/"] as $op): ?>
+        <?php foreach ($operaciones as $op): ?>
             <option <?= $op === $operacion ? "selected" : "" ?>><?= $op ?></option>
         <?php endforeach; ?>
     </select>

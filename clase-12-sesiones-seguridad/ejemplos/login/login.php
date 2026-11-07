@@ -1,7 +1,14 @@
 <?php
 declare(strict_types=1);
 
+$error = "";
+
 session_start();
+$usuarios = require __DIR__ . "/usuarios.php";
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$usuario = trim($_POST["usuario"] ?? "");
+$clave = $_POST["clave"] ?? "";
+$haSalido = isset($_GET["salir"]);
 
 // Si ya ha iniciado sesión, no tiene sentido ver el login
 if (isset($_SESSION["usuario"])) {
@@ -9,14 +16,7 @@ if (isset($_SESSION["usuario"])) {
     exit;
 }
 
-$usuarios = require __DIR__ . "/usuarios.php";
-$error = "";
-$usuario = "";
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $usuario = trim($_POST["usuario"] ?? "");
-    $clave = $_POST["clave"] ?? "";
-
+if ($esEnvio) {
     $datos = $usuarios[$usuario] ?? null;
 
     if ($datos !== null && password_verify($clave, $datos["hash"])) {
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <h1>Iniciar sesión</h1>
 
-    <?php if (isset($_GET["salir"])): ?>
+    <?php if ($haSalido): ?>
         <p style="color: green">Has cerrado la sesión.</p>
     <?php endif; ?>
     <?php if ($error !== ""): ?>

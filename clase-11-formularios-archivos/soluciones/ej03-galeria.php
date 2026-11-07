@@ -1,34 +1,49 @@
 <?php
 declare(strict_types=1);
 
+// Devuelve el mensaje de error, o "" si la foto es correcta
+function validarFoto(?array $foto, array $tipos): string
+{
+    if ($foto === null || $foto["error"] !== UPLOAD_ERR_OK) {
+        return "Elige una foto.";
+    }
+    if ($foto["size"] > 2 * 1024 * 1024) {
+        return "Máximo 2 MB.";
+    }
+    $tipo = getimagesize($foto["tmp_name"])["mime"] ?? "";
+    if (!isset($tipos[$tipo])) {
+        return "Solo JPG, PNG o WEBP.";
+    }
+    return "";
+}
+
+// glob() devuelve la lista de archivos que cumplen un patrón
+function listarFotos(string $carpeta): array
+{
+    $fotos = glob($carpeta . "/*.{jpg,png,webp}", GLOB_BRACE) ?: [];
+    rsort($fotos);   // las más nuevas primero (el nombre empieza por la fecha)
+    return $fotos;
+}
+
 $carpeta = __DIR__ . "/fotos";
 $tipos = ["image/jpeg" => "jpg", "image/png" => "png", "image/webp" => "webp"];
 $mensaje = "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $foto = $_FILES["foto"] ?? null;
+$esEnvio = $_SERVER["REQUEST_METHOD"] === "POST";
+$foto = $_FILES["foto"] ?? null;
 
-    if ($foto === null || $foto["error"] !== UPLOAD_ERR_OK) {
-        $mensaje = "Elige una foto.";
-    } elseif ($foto["size"] > 2 * 1024 * 1024) {
-        $mensaje = "Máximo 2 MB.";
-    } else {
-        $info = getimagesize($foto["tmp_name"]);
-        $tipo = $info["mime"] ?? "";
-        if (!isset($tipos[$tipo])) {
-            $mensaje = "Solo JPG, PNG o WEBP.";
-        } else {
-            $nombre = date("Ymd-His") . "-" . bin2hex(random_bytes(4)) . "." . $tipos[$tipo];
-            move_uploaded_file($foto["tmp_name"], $carpeta . "/" . $nombre);
-            header("Location: ej03-galeria.php");
-            exit;
-        }
+if ($esEnvio) {
+    $mensaje = validarFoto($foto, $tipos);
+    if ($mensaje === "") {
+        $tipo = getimagesize($foto["tmp_name"])["mime"];
+        $nombre = date("Ymd-His") . "-" . bin2hex(random_bytes(4)) . "." . $tipos[$tipo];
+        move_uploaded_file($foto["tmp_name"], $carpeta . "/" . $nombre);
+        header("Location: ej03-galeria.php");
+        exit;
     }
 }
 
-// glob() devuelve la lista de archivos que cumplen un patrón
-$fotos = glob($carpeta . "/*.{jpg,png,webp}", GLOB_BRACE) ?: [];
-rsort($fotos);   // las más nuevas primero (el nombre empieza por la fecha)
+$fotos = listarFotos($carpeta);
 ?>
 <!DOCTYPE html>
 <html lang="es">

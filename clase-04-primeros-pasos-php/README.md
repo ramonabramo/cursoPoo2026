@@ -2,6 +2,8 @@
 
 <p align="center"><img src="../img/emojis/ok.webp" width="120" alt="El profesor da el OK"></p>
 
+> 📕 **Apuntes en PDF:** [clase-04-primeros-pasos-php.pdf](clase-04-primeros-pasos-php.pdf)
+
 ¡Por fin! Tenemos el servidor, tenemos el editor… y hoy escribimos nuestro primer código. 🎉
 
 Este bloque nos va a llevar **unas tres clases**. Os aviso de algo importante desde el principio: **son ejemplos de introducción**. Quiero que veáis cómo funciona la programación web con PHP, que escribáis código, que lo probéis y que perdáis el miedo. No vamos a profundizar en cada tema: en las clases siguientes volveremos sobre todo esto con calma y en detalle.
