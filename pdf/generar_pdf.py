@@ -156,6 +156,8 @@ def preparar(carpeta: str):
             archivo = "datos.json"
         if lenguaje == "bash":
             archivo = "terminal"
+        if lenguaje == "sql":
+            archivo = "consulta.sql"
         return guardar(ventana_codigo(codigo.rstrip("\n"), lenguaje, archivo, proyecto))
 
     cuerpo_actual = cuerpo

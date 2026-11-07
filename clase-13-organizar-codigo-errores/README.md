@@ -290,7 +290,7 @@ Al visitante, un mensaje amable («Ha ocurrido un problema, inténtalo más tard
 ---
 
 **Clase anterior:** 👈 [Clase 12 · Sesiones, login y seguridad](../clase-12-sesiones-seguridad/README.md)
-**Siguiente bloque:** bases de datos con SQL y PDO (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 14 · Bases de datos con PDO](../clase-14-bases-datos-pdo/README.md)
 
 ---
 
