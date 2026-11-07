@@ -1,6 +1,6 @@
 # Temario detallado
 
-> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 15 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
+> Temario **previsto**: puede ajustarse según el ritmo del grupo. Las clases 1 a 16 ya están publicadas. A partir de la Parte 2, la numeración corresponde a **bloques temáticos** (del 08 en adelante) (cada bloque puede ocupar una o varias clases), y cada uno tendrá su carpeta con apuntes, ejemplos y ejercicios resueltos.
 >
 > 🌱 El curso está pensado para personas **sin experiencia previa en programación**. Lo marcado con ⭐ es **para saber más**: se presenta para que os suene, pero no es imprescindible para seguir avanzando.
 
@@ -134,13 +134,16 @@
 
 ## Parte 3: Programación orientada a objetos
 
-### 10. Clases y objetos
-- La idea: modelar cosas del mundo real (clase = plano, objeto = casa construida)
-- Propiedades, métodos y `$this`
-- Constructor y promoción de propiedades en el constructor
-- Visibilidad: `public`, `private` y `protected`; encapsulación con *getters* y *setters*
-- Propiedades `readonly`
-- Propiedades y métodos estáticos, constantes de clase
+### Clase 16 · Bloque 10. Clases y objetos · [ver](clase-16-clases-y-objetos/README.md)
+- Por qué objetos: los problemas de los arrays sueltos
+- El molde y la galleta: clase, objeto, `new` y la flecha `->`
+- Métodos y `$this`
+- El constructor y la promoción de propiedades en el constructor (PHP 8)
+- Encapsulación: `public`, `private` (y `protected`, que se usa con la herencia)
+- *Getters*, *setters* y propiedades `readonly`
+- Constantes de clase, propiedades y métodos `static`, `self::` y `::`
+- Una clase por archivo, cargada con `require_once`; del array de la base de datos al objeto con `desdeArray()`
+- Errores típicos con objetos
 
 ### 11. Herencia, interfaces y polimorfismo
 - Herencia con `extends` y `parent::`

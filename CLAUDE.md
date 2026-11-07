@@ -41,3 +41,7 @@ python3 pdf/generar_pdf.py clase-07-datos-y-operadores
 - Títulos con emojis y avatares del profesor; el código se muestra en ventanas al estilo macOS (tipo CodeSnap).
 - Requisitos: `pip install markdown pygments`, la fuente Noto Color Emoji y Playwright con Chromium.
 - Tras modificar un `README.md`, hay que volver a generar su PDF.
+
+## Commits
+
+- Los mensajes de commit se redactan como si los escribiera el autor del curso: describen el cambio, sin mencionar instrucciones recibidas ni añadir líneas de coautoría o de sesión.

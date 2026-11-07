@@ -449,7 +449,7 @@ Las soluciones son páginas nuevas para **copiar dentro de la carpeta del proyec
 ---
 
 **Clase anterior:** 👈 [Clase 14 · Bases de datos con PDO](../clase-14-bases-datos-pdo/README.md)
-**Siguiente bloque:** programación orientada a objetos: clases y objetos (se publicará en próximas clases). Consultad el [temario](../TEMARIO.md).
+**Clase siguiente:** 👉 [Clase 16 · Clases y objetos](../clase-16-clases-y-objetos/README.md)
 
 ---
 
